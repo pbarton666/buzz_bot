@@ -1,0 +1,3 @@
+Similar to MS Power Point.
+Anyone wanting to do a slide presentation.
+Provides a visual for a lecture plus lots of major details.

@@ -1,0 +1,58 @@
+#NameVirtualHost *
+ServerName pat1
+<VirtualHost _default_:80>
+    DocumentRoot /var/www/pes
+    WSGIScriptAlias / /home/pat1/workspace/djangoproj/apache/django.wsgi
+    ErrorLog    /var/log/apache2/pes-error.log
+    TransferLog /var/log/apache2/pes-access.log
+<Location "/">
+    SetHandler python-program
+    PythonHandler django.core.handlers.modpython
+    SetEnv DJANGO_SETTINGS_MODULE djangoproj.settings
+    #PythonOption django.root /djangoproj
+    PythonDebug On
+    PythonPath "['/home/pat1/workspace/djangoproj','/home/pat1/workspace'] + sys.path"
+</Location>
+
+    <location "/media">
+        SetHandler None
+    </location>
+ 
+    <location "/admin_media">
+        SetHandler None
+    </location>
+ 
+    <location "/phpmyadmin">
+        SetHandler None
+    </location>
+ 
+    <locationmatch ".(jpg|gif|png)$">
+        SetHandler None
+    </locationmatch>
+
+</VirtualHost>
+
+<VirtualHost _default_:443>
+    DocumentRoot /var/local/svn/svn.buzz/repo
+    ErrorLog  /var/www/pes/apache-error-443.log
+    TransferLog /var/www/pes/transferLog-443.log
+    RewriteEngine on
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*) https://{SERVER_NAME}$1 [R,L]
+    LogLevel info
+    SSLCertificateFile /var/local/svn/svn.buzz/ssl.key
+    SSLEngine on
+    SSLProtocol all
+    SSLCipherSuite HIGH:MEDIUM
+
+    <Location />
+        SSLRequireSSL
+        Dav svn
+        SVNPath /var/local/svn/svn.buzz/repo
+        AuthType Basic
+        AuthName "BuzzBot SVN"
+        AuthUserFile /var/local/svn/svn.buzz/accounts
+        Require valid-user
+    </Location>
+</VirtualHost>
+

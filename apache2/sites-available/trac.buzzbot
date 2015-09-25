@@ -1,0 +1,44 @@
+#NameVirtualHost *
+#<VirtualHost *>
+    #ServerName trac.buzzbot.pragmaticraft.com
+    
+    #ServerAlias trac.buzzbot trac.buzzbot.pragmaticraft.com
+    
+
+    #RewriteEngine on
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^(.*) https://%{SERVER_NAME}$1 [R,L]
+#</VirtualHost>
+
+#NameVirtualHost *:443
+<VirtualHost _default_:9443>
+    DocumentRoot /var/local/trac/trac.buzzbot
+
+    #ServerName trac.buzzbot.pragmaticraft.com
+    
+    #ServerAlias trac.buzzbot trac.buzzbot.pragmaticraft.com
+    
+
+    ErrorLog    /var/log/apache2/trac.buzzbot.pragmaticraft.com-error.log
+    TransferLog /var/log/apache2/trac.buzzbot.pragmaticraft.com-access.log
+
+    #SSLCertificateFile /var/local/trac/trac.buzzbot/ssl.key
+    SSLCertificateFile /var/local/svn/svn.buzz/ssl.key
+    SSLEngine on
+    SSLProtocol all
+    SSLCipherSuite HIGH:MEDIUM
+
+    <Location />
+      SetHandler mod_python
+      PythonInterpreter main_interpreter
+      PythonHandler trac.web.modpython_frontend
+      PythonOption TracEnv /var/local/trac/trac.buzzbot
+      PythonOption TracUriRoot /
+
+      SSLRequireSSL
+      AuthType Basic
+      AuthName "BuzzBot TRAC"
+      AuthUserFile /var/local/svn/svn.buzz/accounts
+      Require valid-user
+    </Location>
+</VirtualHost>

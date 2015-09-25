@@ -1,0 +1,55 @@
+
+<VirtualHost _default_:80>
+#    ServerName trac.buzzbot.pragmaticraft.com
+    
+#    ServerAlias trac.buzzbot trac.buzzbot.pragmaticraft.com
+    
+     DocumentRoot /var/www/pes
+     ErrorLog  /var/www/pes/tomcat-error.log
+#    RewriteEngine on
+#    RewriteCond %{HTTPS} !=on
+#    RewriteRule ^(.*) https://%{SERVER_NAME}$1 [R,L]
+</VirtualHost>
+
+<VirtualHost _default_:8443>
+   DocumentRoot /var/local/svn/svn.buzzbot/repo
+   ErrorLog /var/www/pes/tomcat-error-8443.log
+   <Location />
+      Dav svn
+      SVNPath /var/local/svn/svn.buzzbot/repo
+      AuthName  "BuzzBot SVN"
+      AuthUserFile /var/local/svn/svn.buzzbot/accounts
+   </Location>
+</VirtualHost>
+
+<VirtualHost _default_:9001>
+    DocumentRoot /var/local/trac/trac.buzzbot
+    #DocumentRoot /var/www/8443
+    ErrorLog /var/www/pes/tomcat-error-443.log
+#    ServerName trac.buzzbot.pragmaticraft.com
+    
+#    ServerAlias trac.buzzbot trac.buzzbot.pragmaticraft.com
+    
+
+#    ErrorLog    /var/log/apache2/trac.buzzbot.pragmaticraft.com-error.log
+#    TransferLog /var/log/apache2/trac.buzzbot.pragmaticraft.com-access.log
+
+#    SSLCertificateFile /var/local/trac/trac.buzzbot/ssl.key
+#    SSLEngine on
+#    SSLProtocol all
+#    SSLCipherSuite HIGH:MEDIUM
+
+    <Location />
+      SetHandler mod_python
+      PythonInterpreter main_interpreter
+      PythonHandler trac.web.modpython_frontend
+      PythonOption TracEnv /var/local/trac/trac.buzzbot
+      PythonOption TracUriRoot /
+
+#      SSLRequireSSL
+#      AuthType Basic
+#      AuthName "BuzzBot TRAC"
+#      AuthUserFile /var/local/svn/svn.buzzbot/accounts
+#      Require valid-user
+    </Location>
+</VirtualHost>

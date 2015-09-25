@@ -1,0 +1,433 @@
+/*
+Note - I can't seem to set the frame background colors here; it seems to be all or nothing
+an can only be set at the frameset level (same color for all frames).  Could be I'm 
+not grokking the prescidence of the objects in the web pages in css-ese.  So, we have
+the body of each html page (i.e., frame contents) specified with a background-image url
+for it's particularly-colored background .jpg.
+
+Note - I'd like to be able to associate hover, active and other attributes of 'a href' elements
+with their location, but can't seem to be able to. This works:
+   td a:hover, td a:focus { color: #dede23; }
+but when I try to apply it to a named class that's a td element and use
+   .a:hover, .a:focus {color:#dede23;}
+it doesn't "take" and I get the default values for the hover, active and other attributes of "a"
+
+
+*/
+
+/*splash screen-specific*/	
+
+td.bullet-text-header{
+  color:#ffffff;
+  font-family:Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 10px;
+}
+peslogo{
+  padding:0px;
+  width: 2000px;
+  border-style: none;
+}
+img.earthlogo{
+  border-style:none;
+  padding:0px;
+  width:300px;
+  height:300px;
+}
+img.spacer-header{
+ width:150px;
+ height:1px;
+}
+img.spacer-spash-earth{
+ width:10px;
+ height:1px;
+}
+td.splash-text{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-style:italic;
+ font-size: 20px;
+ width: 400px;
+ padding-left: 10px;
+}
+
+/*navigation*/
+img.spacer-menu1{
+ width:10px;
+ height:1px;
+}
+img.spacer-menu2{
+ width:30px;
+ height:1px;
+}
+td.nav-header{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 18px;
+ text-decoration:underline;
+ padding-left: 5px;
+}
+td.nav-text1{
+ color:#ffffff;
+ font-family:Tahoma, sans-serif;
+ font-size: 16px;
+}
+
+td.nav-text2, td.cont-body{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 16px;
+}
+
+/*these work standalone (not sub-elements) would like to tie them to td classes */
+td a:hover, td a:focus { color: #dede23; }
+td a { color: #ffffff; }
+
+td.bullet-text-gold{
+ color:#ffebeb;
+ font-family:Tahoma,sans-serif;
+}
+
+/*
+*used for navigation pages
+*/
+td.cont-headline-text{
+ width:700px;
+ color:#ffffff;
+ font-family:Tahoma, sans-serif;
+ font-style: italic;
+ font-weight: bold;
+ font-size: 16px;
+ padding-bottom: 10px;
+}
+
+td.cont-head{
+ width:700px;
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 16px;
+ padding-left: 10px;
+}
+td.cont-team-gold{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 14px;
+ padding-left: 15px;
+}
+td.cont-team-maroon{
+ color:#8c1616;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 14px;
+ padding-left: 15px;
+}
+td.cont-head-maroon{
+ width:700px;
+ color:#8c1616;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 14px;
+ padding-left: 10px;
+ font-style: italic;
+}
+
+td.cont-body{
+ padding-top:5px;
+ width:700px;
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-style: italic;
+ font-size: 16px;
+}
+td.cont-close{
+ padding-top:5px;
+ width:700px;
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-style: italic;
+ font-size: 16px;
+}
+td.cont-pitch{
+ padding-top:10px;
+ width:700px;
+ color:#ffffff;
+ font-family:Tahoma, sans-serif;
+ font-size: 14px;
+}
+img.spacer-mid{
+width:40px;
+}
+
+
+/*most of below deprecated, as framesets don't use body*/
+
+banner_text{
+   color:#a88065;
+   padding:10px;
+   font-size:30px;
+   width:500px;
+   font-family:Tahoma,sans-serif;
+   font-weight: bold;
+   color:#6c6c6c;
+   text-align:center;
+}
+   
+td.caption{
+font-size: 1.1em; font-weight: bold; text-align: left; 
+padding: 5px; color: #efbc0f;
+text-decoration: underline;
+}   
+
+div.buzzdiv{
+padding: 0px;
+margin:0px;
+width: 770px;
+height: 300px;
+overflow: auto;
+}
+
+table.buzztable{
+  padding: 0px;
+  margin: 0px;
+  border: 2px solid #16558c;
+  background: #8c1616;  /*includes "padding" areas and cell separators*/
+  width: 750px;
+}
+/*these all work as expected*/
+
+.buzzhead{
+  background: #8c1616;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top:   1px;
+  padding-bottom: 1px;
+  color:#ffffff;
+  font-family:Tahoma, sans-serif;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+
+.odd td { 
+ background: #cfbebe; 
+ padding: 3px; 
+ } 
+.odd td a, .odd td a:link { color: #8c1616; }
+
+.even td { 
+ background: #9e9191; 
+ padding: 3px;
+
+ } 
+.even td a, .even td a:link { color: #8c1616; }
+
+
+.dashline {
+border-top: 1px dotted #ffffff;
+margin-top: 3px;
+padding-bottom: 6px;
+}
+
+
+td.buzzdataleft{
+ padding-left: 5px;
+ padding-right: 0px;
+ text-align: left;
+ }
+ 
+td.buzzdatacenter{
+ padding-left: 0px;
+ padding-right: 0px;
+ text-align: center;
+ } 
+
+paulinghouse{
+border: 2px #8c1616  ;
+padding-right: 10px;
+margin-right: 10px;
+height:  400px;
+width:   400px;
+}
+spacer-contact{
+ height: 10px;
+ width: 10px;
+} 
+
+td.contact-header{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 18px;
+ text-decoration:underline;
+ padding: 0px;
+ margin: 0px;
+}
+td.contact-text{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 16px;
+  padding: 0px;
+ margin: 0px;
+}
+td.contact-footnote{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 12px;
+ font-style: italic;
+ padding: 0px;
+ margin: 0px;
+}
+table.stattable{
+width: 500px;
+border: 0px solid #16558c;
+/*background: #6e6565; 
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+  border: 1px solid #16558c;
+  background: #8c1616; 
+  width: 700px;
+  */
+}.caption1{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+ text-decoration: underline;
+}
+.stat-bar{
+ margin: 0px;
+ text-align: left;
+ border: 0px solid #000000;
+ padding-right: 0px;
+ padding-left: 0px;
+ 
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 16px;
+ padding-left: 10px; 
+ 
+ }
+.stat-label{
+ color:#3d3838;
+ font-family:Tahoma, sans-serif;
+ font-size: 14px;
+
+
+ height: 10px;
+ margin: 0px;
+ border: 0px solid #000000;
+
+ text-align: right;
+ } 
+ 
+.dashline {
+border-top: 1px dotted #8c1616;
+margin-top: 3px;
+padding-bottom: 6px;
+}
+.spacer-paragraph{
+width: 1px;
+height: 1px;
+}
+td.nav-text3, td.cont-body{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 16px;
+ font-weight: bold;
+
+}
+.reference-header-text{
+color:#8c1616;
+text-decoration: underline;
+font-size: 16px;
+ font-weight: bold;
+}
+.reference-text{
+color:#8c1616;
+font-size: 14px;
+padding-left: 10px;
+}
+
+table.team-head-table{
+  color:red;
+  padding:0px;
+  margin:0px;
+}
+.team-headline-text{
+ width:700px;
+ color:#ffffff;
+ font-family:Tahoma, sans-serif;
+ font-style: italic;
+ font-weight: bold;
+ font-size: 16px;
+ padding-bottom: 0px;
+ padding-top: 0px;
+}
+.tr{
+ padding: 0px;
+ margin: 0px;
+ }
+
+table.team-body-table{
+  padding:0px;
+  margin:0px;
+  border: 0px solid #16558c;
+  width: 450px;
+}
+.team-body-name{
+ color:#efbc0f;
+ font-family:Tahoma, sans-serif;
+ font-size: 16px;
+ font-weight: bold;
+}
+.team-body-creds{
+ color:#ffffff;
+ font-family:Tahoma, sans-serif;
+ font-size: 11px;
+ font-weight: bold;
+}
+
+
+/*
+
+buzztable { border-collapse: collapse; border: 1px solid #839E99; 
+background: #f1f8ee; font: .9em/1.2em Georgia, "Times New Roman", Times, 
+serif; color: #033; }
+
+.caption { font-size: 1.3em; font-weight: bold; text-align: left; 
+padding: 1em 4px; }
+
+.td, .th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+
+.th { background: #839E99; color: #fff; font-weight: bold; text-align: 
+left; padding-right: .5em; vertical-align: top; }
+
+
+.thead th { background: #2C5755; text-align: center; }
+.odd td { background: #DBE6DD; }
+.odd th { background: #6E8D88; }
+
+.td a, td a:link { color: #325C91; }
+.td a:visited { color: #466C8E; }
+.td a:hover, td a:focus { color: #7A4676; }
+.tr a:hover {color:#7A4676;}
+.th a, td a:active { color: #fff; }
+
+.tr.hover {background: Crimson;}
+
+.tfoot th, tfoot td { background: #2C5755; color: #fff; }
+.th + td { padding-left: .5em; }
+
+.tbody tr.odd:hover  tr.even:hover{
+        background-color: Crimson;
+}
+
+*/
+

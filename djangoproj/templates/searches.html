@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+  </head>   
+    <body  background="/media/dark-green.jpg">
+
+<!-- need viewSearches and OK buttons-->	
+	
+	
+		<!-- header table -->
+		<table>		
+			<tr>
+				<td>
+					<img src="/media/firefly.jpg" height="60px" width="60px"></img>
+				</td>
+				<td class="nav-header">
+					Searches
+				</td>
+			</tr>	
+		</table>    
+
+		<!-- main data div -->
+		<div class="buzzdiv">
+		<!-- outer table as container for actual data table; allows latter to scroll -->
+			<table>	
+				<tr>
+					<td>						
+					</td>
+					<td>
+						<!-- the 'real' data table -->		
+						
+						<table class="buzztable">
+							<!--allow addition of a new search-->						
+							
+							<tr>
+								<form method="POST" action="processManageSearches">
+									<td>
+										
+											<input type="submit"  name = "new" value ="new" />
+									</td>	
+								</form>		
+							</tr>
+								
+							<tr><td>&nbsp;</td></tr>
+							
+							<!--user's searches-->
+							{% if mySearches %}
+									<tr>
+										<td colspan="2" class="buzzdatacenter" >
+											<u>Your Searches:</u>
+										</td>
+									</tr>		
+									{% for s in mySearches %}
+										<tr class="{% cycle 'odd' 'even' as rowcolors %}">
+										    <td width="10px">
+												<form  method="POST" action="processManageSearches">
+											
+												<select style="font-size:10px;font-family:Arial;width:75px" name="thisAction"  onchange=submit()>
+												<option > --select--</option>
+												<option value="editsearch/{{s.id}}" >edit</option>
+												<option value="deletesearch/{{s.id}}" >delete</option>
+												
+												</select>
+												</form>
+											</td>
+											<td>
+											  {{s.name}} 
+											</td>
+										</tr>
+									 {% endfor %}
+								 {% endif %}
+							
+							<tr><td>&nbsp;</td></tr>	 
+							<!--public searches-->
+							{% if publicSearches %}
+									<tr>
+										<td colspan="2" class="buzzdatacenter" >
+											<u>All Public Searches:</u>
+										</td>
+									</tr>		
+									{% for s in publicSearches %}
+										<tr class="{% cycle 'odd' 'even' as rowcolors %}">
+										    <td width="10px">
+												<form  method="POST" action="processManageSearches">
+											
+												<select style="font-size:10px;font-family:Arial;width:75px" name="thisAction"  onchange=submit()>
+												<option > --select--</option>
+												<option value="editsearch/{{s.id}}" >view</option>	
+												</select>
+												</form>
+											</td>
+											<td>
+											  {{s.name}} 
+											</td>
+										</tr>
+									 {% endfor %}
+								 {% endif %}
+
+						</table>	 <!-- main content table -->
+						</form>
+					</td>
+				</tr>
+			</table>	<!-- outer table -->
+		</div>		
+		
+     </body>
+  </html>
+  
+
+
+

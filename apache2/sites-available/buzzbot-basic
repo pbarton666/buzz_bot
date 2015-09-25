@@ -1,0 +1,14 @@
+<VirtualHost 67.42.4.125>
+
+Alias /static /usr/local/turbogears/buzzbot/buzzbot/static
+
+WSGIScriptAlias / /usr/local/turbogears/buzzbot/apache/buzzbot.wsgi
+#WSGIDaemonProcess 67.42.4.125 threads=10 maximum-requests=1000
+
+<Directory /usr/local/turbogears/buzzbot/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+</VirtualHost>
+

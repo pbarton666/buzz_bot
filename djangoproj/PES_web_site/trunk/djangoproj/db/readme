@@ -1,0 +1,4 @@
+The sql files here are scripts to build an empty shell for this app.  
+The idea is that we can use svn to quickly flag any changes if we need
+to tweak the schema on the dev machine.
+

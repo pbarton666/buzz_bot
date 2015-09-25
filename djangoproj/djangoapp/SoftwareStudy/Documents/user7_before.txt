@@ -1,0 +1,1 @@
+A program to create online classes or lessons for students.	Teachers and corporate trainers	Allows one to create a score of pages or slides with testinig capability.

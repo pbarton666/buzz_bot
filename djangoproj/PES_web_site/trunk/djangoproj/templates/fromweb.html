@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>css tables</title>
+
+<style type="text/css">
+
+body,html { font-family:Arial,Helvetica,sans-serif; }
+
+/* as an ID, a specfic table once on a page
+border="side" is a bit clunky but works for specific sides when they 
+differ. */
+#main_table {
+border-top: 1px solid #000000;
+border-right: 4px double #000000;
+border-bottom: 4px double #000000;
+border-left: 1px solid #000000;
+padding: 12px;
+margin: 24 12 36px 12; /* Top, right, bottom, left */
+}
+
+/* or a class, applies to any table class="whatever" */
+table.whatever {
+border: 2px solid #ff0000;
+margin: 6px;
+padding: 12px 6px 18px 12px; /* Top, right, bottom, left */
+}
+/* With those established, you can style the cells within the tables */
+
+#main_table td { background-color: #fef0c5; }
+table.whatever td {
+font-size: 80%;
+background-color: #cef4ff;
+}
+</style>
+</head>
+
+<body>
+
+<table id="main_table" cellpadding="0" cellspacing="0" border="0">
+<tr><td>
+<p>Main content. Identified by ID, it can only be used once on a given 
+page.</p>
+<br>
+<br>
+</td></tr>
+</table>
+
+<table class="whatever" cellpadding="0" cellspacing="0" border="0">
+<tr><td>
+<p>You can apply a class to multiple instances on a page.</p>
+</td></tr>
+</table>
+
+</body>
+</html> 

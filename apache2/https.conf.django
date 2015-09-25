@@ -1,0 +1,26 @@
+MaxRequestsPerChild 1
+
+WSGIScriptAlias / /home/pat1/django_projects/buzz/apache/django.wsgi
+
+<location "/">
+    SetHandler python-program
+    PythonHandler django.core.handlers.modpython
+    SetEnv DJANGO_SETTINGS_MODULE buzz.settings
+    PythonPath "['/home/pat1/django_projects/'] + sys.path"
+</location>
+ 
+<location "/media">
+    SetHandler None
+</location>
+ 
+<location "/admin_media">
+    SetHandler None
+</location>
+ 
+<location "/phpmyadmin">
+    SetHandler None
+</location>
+ 
+<locationmatch ".(jpg|gif|png)$">
+    SetHandler None
+</locationmatch>

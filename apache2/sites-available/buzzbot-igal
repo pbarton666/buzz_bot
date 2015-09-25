@@ -1,0 +1,126 @@
+########################################################################
+#                         server wide specs                            #
+########################################################################
+
+#Note: can't use Name based virtual servers with ssl
+
+###################################################################
+#    HOST TO SERVE AT "/VAR/WWW ... (deployment directory)        #
+###################################################################
+
+<VirtualHost 67.42.4.123>
+#added serve name
+ServerName 67.41.4.123
+
+#allows flexibility, enabling bot/dir/  and bot/dir  both to work
+#UseCanonicalName Off
+ServerSignature Off
+AddDefaultCharset utf-8
+
+#add SSL
+SSLEngine on
+SSLCertificateFile /etc/apache2/ssl/buzz.crt
+SSLCertificateKeyFile /etc/apache2/ssl/buzz.key.unsecure
+
+
+#Alias /static /usr/local/turbogears/buzzbot/buzzbot/static
+Alias /static /var/www/buzzbot/current/buzzbot/static
+Alias /chartapi /var/www/buzzbot/timeplot/api/10
+#Alias /displayChart/eventfiles /var/www/buzzbot/current/buzzbot/eventfiles
+Alias /eventfiles /var/www/buzzbot/current/buzzbot/eventfiles
+
+ErrorLog     /var/log/apache2/buzzbot-error.log
+TransferLog  /var/log/apache2/buzzbot-access.log
+
+WSGIDaemonProcess 67.42.4.123  threads=4
+WSGIProcessGroup 67.42.4.123
+WSGIScriptAlias / /var/www/buzzbot/current/apache/buzzbot.wsgi
+
+#WSGIDaemonProcess 67.42.4.123 threads=10 maximum-requests=1000
+
+
+#ProxyHTMLLogVerbose On   need to install mod_html - not in current build
+LogLevel debug
+
+
+<Directory /var/www/buzzbot/current/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+
+#newly added 20 feb 09
+#these directives allow wing to "serve" the site, but interfere with
+#  the other ProxyPass commands
+#ProxyPass / http://localhost:8051/
+#ProxyPassReverse  http://localhost:8051 /
+#ProxyPassReverseCookieDomain http://localhost:8051 /
+
+ProxyPass /eventfiles/ !
+ProxyPass /var/www/buzzbot/current/buzzbot/eventfiles/ !
+ProxyPass /static/ !
+#following breaks timeplot because calls to xml are not served
+#ProxyPass /ajax/api-2.0/scripts/ !
+ProxyPass /displayChart !
+
+</VirtualHost>
+
+#################################################################
+#       HOST TO SERVE AT "/PAT1/"  (working directory)          #
+#################################################################
+
+<VirtualHost 67.42.4.124>
+DocumentRoot /home/pat1/buzz/buzzbot
+
+#added serve name
+ServerName 67.42.4.124
+ServerSignature Off
+AddDefaultCharset utf-8
+
+#add SSL
+SSLEngine on
+SSLCertificateFile /etc/apache2/ssl/work.crt
+SSLCertificateKeyFile /etc/apache2/ssl/work.key.unsecure
+
+
+Alias /static /home/pat1/buzz/buzzbot/static
+Alias /chartapi /home/pat1/buzz/buzzbot/timeplot/api/10
+Alias /eventfiles /home/pat1/buzz/buzzbot/eventfiles
+
+ErrorLog     /var/log/apache2/buzzbot-error.log
+TransferLog  /var/log/apache2/buzzbot-access.log
+
+WSGIDaemonProcess 67.42.4.124  threads=4
+WSGIProcessGroup 67.42.4.124
+WSGIScriptAlias / /home/pat1/buzz/apache/buzzbot.wsgi
+
+#ProxyHTMLLogVerbose On   need to install mod_html - not in current build
+LogLevel debug
+
+
+<Directory /home/pat1/buzz/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+
+#newly added 20 feb 09
+#these directives allow wing to "serve" the site, but interfere with
+#  the other ProxyPass commands
+#ProxyPass / http://localhost:8051/
+#ProxyPassReverse  http://localhost:8051 /
+#ProxyPassReverseCookieDomain http://localhost:8051 /
+
+ProxyPass /eventfiles/ !
+ProxyPass /home/pat1/buzz/buzzbot/eventfiles/ !
+ProxyPass /static/ !
+#following breaks timeplot because calls to xml are not served
+#ProxyPass /ajax/api-2.0/scripts/ !
+ProxyPass /displayChart !
+
+
+#This redirects requests made to http ... to https ...
+#RewriteEngine on
+#RewriteRule ^/(.*) https://67.42.4.124/$1 [redirect=permanent]
+</VirtualHost>
+

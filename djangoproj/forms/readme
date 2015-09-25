@@ -1,0 +1,7 @@
+We're putting all our interactive forms in this directory.
+These will cover login/logout, search term entry, sorting, etc.
+
+We'll try to follow the Django best practices vis-a-vis importing
+blocks of headers, localization, etc.
+
+Handling methods are in forms.py

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;
+			charset=iso-8859-1" />
+		<link href="media/style.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<!-- pull in the header, css, etc. from base.html; then do a background fill; then add the content -->
+	<body  background="/media/dark-green.jpg">
+	
+		<!--main container table has two columns (search and screening criteria) separated by a blank one-->
+		<table valign="top" class="search-term-table"> <!--main container table-->
+		
+			<tr valign="top">  <!--row for the main elements (search and screening criteria) -->
+				<td><!--data element for search criteria-->
+					<form action="../processSearchOptions/{{search.id}}" method="POST"> <!--form for search criteria-->
+						<input type='hidden' name='searchid' value={{search.id}}>
+			
+						<table class="search-table">  <!--table for search criteria (elements:  ? image, label, input)-->	
+							<tr class="search-status-row"> <!--page title row-->
+								<td></td>
+								<td> </td>
+								<td><u>Main Search Criteria</u> </td>				
+							</tr> <!--end of page title row-->
+						
+							<tr class="search-input-row"> <!--search title row-->
+								<td></td>
+								<td>Title</td>
+								<td> <textarea name="name" cols="40" rows="1" height="2px"
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{search.name}}</textarea> 
+								</td>				
+							</tr> <!--end of title row-->	
+				
+							<tr class="search-input-row"> <!--include row-->
+								<td>  </td>
+								<td>Search<br>Terms e.g.,<br> (dog, cat)</td>
+						
+								<td><textarea name="include" cols="40" rows="2" 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{search.include}}</textarea> 
+								</td>				
+							</tr> <!--end of include row-->		
+					
+							<tr class="search-input-row"> <!--and/or selection row-->
+								<td></td>
+								<td></td>
+								<td> Use all terms i.e., use "AND"? {{search.andor}}
+									<input type="checkbox" name="andor" 
+										{% if search.andor %} checked="checked"  {% endif %} 
+										{% if not isowner %} disabled="disabled"  {% endif %}
+									/>
+								</td>				
+							</tr> <!--end of and/or selection row-->		
+					
+							<tr class="search-input-row"> <!--exclude row-->
+								<td>  </td>
+								<td>Exclusion<br>Terms</td>
+								<td><textarea name="exclude" cols="40" rows="2" 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{search.exclude}}</textarea> 
+								</td>				
+							</tr> <!--end of exclude row-->		
+								
+							<tr class="search-input-row" > <!--share row-->
+								<td>  </td>
+								<td colspan="3">Share this search? 
+									<input type="checkbox" name="ispublic"
+									{% if search.ispublic %} checked="checked" {% endif %} 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									/>
+								</td>
+							</tr> <!--end of share row-->	
+					
+							<tr ><td>&nbsp;</td></tr> <!--null spacer row-->								
+					
+							<tr > <!--button row-->
+								<td></td>
+								<td></td>
+								<td >
+									<input type="submit"  name = "thisAction" value ="update" {% if not isowner %} disabled="disabled"  {% endif %} /> 
+									&nbsp;
+									<input type="submit"  name = "thisAction" value ="revert" {% if not isowner %} disabled="disabled"  {% endif %}/> 
+									&nbsp;
+									<input type="submit"  name = "thisAction" value ="return" /> 												
+								</td>			
+							</tr> <!--end ofbutton row-->								
+									
+							<tr class="search-input-row" > <!--management options row-->
+								<td></td>
+								<td >Management<br>Options </td>
+								<td width="10px">
+									<select style="font-size:10px;font-family:Arial;width:250px" name="thisAction"  
+										onchange=submit() 
+										{% if not isowner %} disabled="disabled" {% endif %}>
+									<option > --select--</option>
+									<option value="deleteSearchContent" >clear all content for this search</option>
+									<option value="deleteSites" >clear sites for this search </option>
+									<option value="deleteSearchContentAndSites" >clear sites and content</option>
+									<option value="uploadSites" >upload your list of sites to visit</option>
+									<option value="reviewSites" >review list of sites</option>	
+									</select>				
+								</td>											
+							</tr> <!--end of management options row--->
+					
+							<tr class="search-input-row" > <!--status row-->
+								<td></td>
+								<td>Status</td>
+								<td >
+									Sites visited: {{urlcount}} <br> Content bits: {{contentcount}}
+								</td>			
+							</tr> <!--end of status row-->						
+					
+						</table>  <!--end of search input table-->
+					</form>  <!--end of the search criteria form-->
+		
+				</td> <!--end of data element for search criteria-->
+			
+				<td> 
+				    <!-- empty data element separating search specs and criteria-->
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td> 
+		
+				<td> <!--data element for screening criteria-->
+			
+			
+					<form action="../processSearchOptions/{{search.id}}" method="POST"> <!--form for search criteria-->
+						<input type='hidden' name='searchid' value='{{search.id}}'/>		
+						<table class='container-table'>  <!--container table for search criteria-->
+							<tr> <!-- this table contains two rows: one to list the criteria, the other for options -->
+								<td>			
+									<table class="search-table">  <!--inner table for search criteria-->						
+										<tr class="title-row"> <!--title row-->
+											<td  colspan="2"><u>Secondary Content Filters</u></td>				
+										</tr> <!--end of title row-->
+								
+										{% for v in viewCriteria %}
+											<tr>
+												<td>
+													<select style="font-size:10px;font-family:Arial;width:80px" name="thisAction"  onchange=submit() >
+														<option > --select--</option>
+														{% if isowner %}  
+															<option value="editSearchCriteria/{{v.id}}">edit</option>
+															<option value="deleteSearchCriteria/{{v.id}}">delete</option>
+														{% else %}
+															<option value="editSearchCriteria/{{v.id}}" >view</option>
+														{% endif %}														
+													</select>								
+												</td>								
+												<td>
+													{{v.title}}
+												</td>																	
+											</tr>
+										{% endfor %}								
+									</table>  <!--end of inner table for search criteria-->		
+								</td> <!--end of data element for search criteria-->		
+							</tr> <!-- end of search criteria container table row that hosts the inner table -->
+								
+							<tr> 
+								<td> 
+									<input type="submit"  name = "thisAction" value ="new filter" {% if not isowner %} disabled="disabled"  {% endif %} /> 
+								</td>	
+							</tr>
+						</table> <!-- end of the search criteria container table -->
+					</form> <!-- end of form for criteria-->
+					
+				</td>  <!--end of data element for criteria-->
+				
+			</tr>	<!--end of row of the main container table-->			
+		</table> <!--  end of main container table-->
+	
+	</body>
+</html>

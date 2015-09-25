@@ -1,0 +1,2 @@
+Note: the project root set in apache.wsgi needs to be set to reflect
+either the deploy directory (www...) or the working directory.

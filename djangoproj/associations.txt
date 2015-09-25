@@ -1,0 +1,924 @@
+*********most common assertions ************
+classical music
+     HasProperty(classical music, relax)[]
+     UsedFor(concert hall, classical music)[]
+     HasA(classical music, rhythm)[]
+     IsA(classical music, music)[]
+     HasA(classical music, piano piece)[]
+     HasProperty(classical music, sing)[often]
+     AtLocation(classical music, house)[]
+     IsA(classical music, challenge play well)[]
+     AtLocation(bass baritone, classical music)[]
+     CapableOf(classical music, consist song)[]
+     ReceivesAction(classical music, enjoy few)[]
+     ReceivesAction(classical music, play musical)[]
+     HasA(composer, classical music)[]
+     CapableOf(classical music, old old time)[]
+     HasA(classical music, always popular)[]
+
+movie
+     AtLocation(movie, theater)[]
+     AtLocation(actor, movie)[]
+     UsedFor(movie, entertainment)[]
+     IsA(movie, film)[]
+     AtLocation(movie screen, movie)[]
+     AtLocation(seat, movie)[]
+     IsA(film, movie)[]
+     AtLocation(zombie, movie)[]
+     ReceivesAction(movie, record film)[]
+     AtLocation(mammoth, movie)[]
+     AtLocation(movie, movie)[]
+     AtLocation(audience, movie)[]
+     AtLocation(movie, video store)[]
+     InstanceOf(titanic, movie)[]
+     AtLocation(friends, movie)[]
+
+golf
+     IsA(golf, sport)[]
+     IsA(golf, elitist sport)[]
+     CapableOf(person, golf)[]
+     ReceivesAction(golf, invent scot)[]
+     IsA(golf, healthy pastime)[]
+     ReceivesAction(golf, play club)[]
+     HasProperty(golf, expensive)[]
+     IsA(golf, expensive hobby)[]
+     IsA(golf, leisure activity)[]
+     ReceivesAction(golf, invent scotland)[]
+     IsA(golf, expensive game)[]
+     IsA(golf, spiritual path)[]
+     IsA(golf, physical rigorous sport)[not]
+     SimilarSize(golf, ping-pong)[]
+     HasSubevent(go vacation, golf)[]
+
+concentrate
+     HasPrerequisite(study, concentrate)[]
+     HasSubevent(drive car, concentrate)[]
+     HasPrerequisite(remember, concentrate)[]
+     HasSubevent(calculate quick, concentrate)[]
+     HasPrerequisite(memorize, concentrate)[]
+     HasPrerequisite(listen, concentrate)[]
+     HasSubevent(take midterm, concentrate)[]
+     HasSubevent(commit memory, concentrate)[]
+     HasFirstSubevent(pray, concentrate)[]
+     HasPrerequisite(go trance, concentrate)[]
+     HasPrerequisite(read, concentrate)[]
+     HasFirstSubevent(remember phone number, concentrate)[]
+     MotivatedByGoal(go trance, concentrate)[]
+     HasSubevent(exam, concentrate)[]
+     UsedFor(concentrate, learn)[not]
+
+thrill
+     UsedFor(climb mountain, thrill)[]
+     MotivatedByGoal(bungee jump high bridge, thrill)[]
+     HasProperty(roller coaster, thrill)[]
+     Causes(see excite story, thrill)[]
+     IsA(rush, thrill)[]
+     SimilarSize(delight, thrill)[]
+     Causes(go performance, thrill)[sometimes]
+     HasA(thrill, adrenalin)[]
+     IsA(excitement, thrill)[]
+     Causes(play baseball, thrill)[]
+     UsedFor(compete against, thrill)[]
+     UsedFor(see excite story, thrill)[]
+     MotivatedByGoal(scuba dive, thrill)[]
+     IsA(imagination, thrill)[]
+     HasProperty(see statue liberty, thrill)[]
+
+mystery
+     IsA(mystery, book)[]
+     UsedFor(moon, mystery)[]
+     CausesDesire(mystery, determine truth)[]
+     IsA(enigma, mystery)[]
+     Desires(person, mystery)[]
+     IsA(mystery, know)[not]
+     AtLocation(computer, mystery)[not]
+     HasA(mystery, detective)[]
+     PartOf(suspence, mystery)[]
+     IsA(book, mystery)[]
+     IsA(mystery, book can read)[]
+     HasA(mystery, hint)[]
+     CausesDesire(mystery, discover truth)[]
+     CapableOf(mystery, turn small event)[]
+     IsA(paradox, mystery)[]
+
+death
+     Causes(kill, death)[sometimes]
+     Causes(kill, death)[]
+     PartOf(death, life)[]
+     Causes(commit suicide, death)[sometimes]
+     CapableOf(death, bring sorrow)[]
+     HasSubevent(fight enemy, death)[]
+     Causes(advance battle, death)[sometimes]
+     AtLocation(death, war)[]
+     Causes(fight war, death)[sometimes]
+     Causes(commit murder, death)[sometimes]
+     HasProperty(death, inevitable)[]
+     Causes(war, death)[]
+     HasSubevent(heart attack, death)[]
+     Causes(stab death, death)[]
+     HasSubevent(kill, death)[]
+
+ghost
+     IsA(spook, ghost)[]
+     IsA(spirit, ghost)[]
+     IsA(ghost, disembody spirit)[]
+     IsA(ghost, spirit)[]
+     AtLocation(ghost, cemetery)[]
+     IsA(ghost, popular costume halloween)[]
+     CapableOf(ghost, appear late night)[]
+     CapableOf(ghost, surprise people)[]
+     IsA(shade, ghost)[]
+     HasA(spirit, ghost)[]
+     HasA(ghost, sheet)[]
+     IsA(ghost, popular movie)[]
+     HasA(ghost, apparition)[]
+     HasProperty(ghost, allege disembody spirit)[]
+     IsA(ghost, delusion)[]
+
+mozart
+     IsA(mozart, human)[]
+     IsA(mozart, famous composer)[]
+     IsA(mozart, composer)[]
+     IsA(mozart, person)[]
+     IsA(mozart, great composer)[]
+     IsA(mozart, brilliant musical composer)[]
+     IsA(mozart, austrian composer)[]
+     InheritsFrom(mozart, composer)[]
+     CapableOf(mozart, use decoration note composition)[often]
+     ConceptuallyRelatedTo(composer, mozart)[]
+
+music
+     IsA(rock, music)[]
+     IsA(music, sound)[]
+     CreatedBy(music, composer)[]
+     CreatedBy(music, compose)[]
+     HasProperty(music, soothe)[]
+     IsA(music, form art)[]
+     HasProperty(music, relax)[]
+     IsA(metal, music)[]
+     Causes(play violin, music)[]
+     IsA(classical, music)[]
+     IsA(music, language)[]
+     HasProperty(music, relax)[usually]
+     IsA(music, art)[]
+     IsA(jazz, music)[]
+     Causes(play violin, music)[sometimes]
+
+spirit
+     AtLocation(spirit, bar)[]
+     IsA(god, spirit)[]
+     UsedFor(spirit, drink)[]
+     IsA(ghost, spirit)[]
+     AtLocation(spirit, liquor cabinet)[]
+     IsA(spirit, ghost)[]
+     AtLocation(spirit, graveyard)[]
+     HasProperty(spirit, alcohol)[]
+     UsedFor(spirit, win game)[]
+     UsedFor(spirit, nothing not exist)[]
+     UsedFor(spirit, comradship)[]
+     UsedFor(spirit, special occasion)[]
+     UsedFor(spirit, communicate dead)[]
+     UsedFor(spirit, haunt house)[]
+     CapableOf(spirit, haunt)[]
+
+scary
+     HasProperty(rollercoaster, scary)[]
+     HasProperty(storm, scary)[]
+     HasProperty(roller coaster, scary)[]
+     HasProperty(bungee jump, scary)[]
+     HasProperty(strand island, scary)[]
+     HasProperty(fire, scary)[]
+     HasProperty(many people consider crime, scary)[]
+     HasProperty(go downstairs dark, scary)[]
+     HasProperty(people like rollercoaster ride because, scary)[]
+     HasProperty(cobweb love boat ride, scary)[]
+     HasProperty(lightning bolt, scary)[]
+     HasProperty(tornado, scary)[]
+     IsA(crime, scary)[]
+     HasProperty(red sky, scary)[]
+     HasProperty(darkness, scary)[]
+
+evil
+     HasProperty(evil, bad)[]
+     HasProperty(police officer, evil)[]
+     UsedFor(evil, provide opposition good)[]
+     HasProperty(many human, evil)[]
+     Desires(person, evil)[not]
+     HasProperty(war, evil)[]
+     DefinedAs(evil, opposite good)[]
+     IsA(murder, evil)[]
+     MotivatedByGoal(kill, evil)[]
+     HasProperty(murder screwdriver, evil)[]
+     HasProperty(treachery, evil)[]
+     HasProperty(joker, evil)[]
+     HasProperty(demon, evil)[]
+     HasProperty(scheme, evil)[]
+     CausesDesire(evil, cry retreat fight)[]
+
+fanatic
+     IsA(fanatic, person)[]
+     DefinedAs(fanatic, follower ideology)[]
+     IsA(person, fanatic)[]
+     UsedFor(witch hunt, fanatic)[]
+     IsA(cult, fanatic)[]
+     IsA(fanatic, human)[]
+     HasProperty(fanatic, incomplete insecure)[]
+
+spiritual path
+     IsA(golf, spiritual path)[]
+
+trance
+     IsA(trance, state mental activity)[]
+     AtLocation(person, trance)[]
+     CapableOf(trance, silly stage)[]
+     HasA(trance, state)[]
+     IsA(trance, strange experience human)[]
+     HasProperty(trance, faint)[]
+     HasProperty(trance, hypnotize)[]
+     HasProperty(trance, meditation)[]
+     HasProperty(trance, sleep walk)[]
+     HasProperty(hypnotic, trance)[]
+     IsA(sleep, trance)[]
+     IsA(trance, dance music)[]
+     IsA(trance, hypnosis)[]
+     IsA(trance, hypnotize)[]
+     IsA(trance, hypnotic)[]
+
+meditate
+     HasPrerequisite(go trance, meditate)[]
+     UsedFor(go trance, meditate)[]
+     HasSubevent(improve yourself, meditate)[]
+     HasPrerequisite(sit quiet, meditate)[]
+     UsedFor(sit quiet, meditate)[]
+     UsedFor(chapel, meditate)[]
+     HasSubevent(sit quiet, meditate)[]
+     UsedFor(mantra, meditate)[]
+     HasSubevent(meditate, let mind go)[]
+     HasPrerequisite(achieve enlightenment, meditate)[]
+     HasFirstSubevent(meditate, relax)[]
+     UsedFor(toy marble, meditate)[]
+     ReceivesAction(meditate, revitalize)[]
+     ReceivesAction(meditate, soothe)[]
+     HasLastSubevent(go trance, meditate)[]
+
+sex
+     HasProperty(sex, fun)[]
+     IsA(sex, activity)[]
+     UsedFor(bed, sex)[]
+     HasProperty(sex, enjoyable)[almost always]
+     HasSubevent(start family, sex)[]
+     Causes(sex, child)[sometimes]
+     HasSubevent(sex, orgasm)[]
+     HasProperty(sex, good)[]
+     Causes(sex, baby)[sometimes]
+     HasProperty(sex, pleasurable)[]
+     HasSubevent(reproduce, sex)[]
+     CapableOf(sex, feel good)[]
+     IsA(sex, enjoyable activity)[]
+     IsA(sex, three letter word)[]
+     IsA(sex, good)[]
+
+actor
+     AtLocation(actor, theater)[]
+     Desires(actor, bad review)[not]
+     CapableOf(actor, star movie)[]
+     AtLocation(actor, movie)[]
+     IsA(val kilmer, actor)[]
+     AtLocation(actor, television)[]
+     AtLocation(actor, show)[]
+     CapableOf(actor, star film)[]
+     UsedFor(perform, actor)[]
+     IsA(actor, person)[]
+     CapableOf(actor, appear movie)[]
+     CapableOf(actor, act bad)[]
+     MotivatedByGoal(pretend, actor)[]
+     AtLocation(actor, opera)[]
+     CapableOf(actor, pretend)[]
+
+*********associateive strength not normalized  ************
+(in other words, large numbers just represent greater strength
+ but do not pretend to measure anything else)
+ 
+
+the things most closely related to *classical music* are
+     (u'music', 3.947885773549372)
+     (u'door', 1.8429910293100242)
+     (u'bathroom', 1.8338883383920157)
+     (u'window', 1.8304701612817595)
+     (u'computer', 1.7329761359038496)
+     (u'man', 1.7188424461122127)
+     (u'furniture', 1.615745729502762)
+     (u'bed', 1.5118312084127354)
+     (u'carpet', 1.4626825120722058)
+     (u'family', 1.4175951185701126)
+
+the things most closely related to *movie* are
+     (u'movie', 19.045065415009617)
+     (u'theater', 15.853747281962615)
+     (u'show', 15.513905465695753)
+     (u'play', 15.079637402013962)
+     (u'seat', 12.327359770542255)
+     (u'theatre', 11.940311121148733)
+     (u'person', 11.576246991952113)
+     (u'movies', 10.761736968242412)
+     (u'book', 10.694985896922246)
+     (u'opera', 10.449343705322155)
+
+the things most closely related to *golf* are
+     (u'swim', 6.57999109980722)
+     (u'fish', 5.8720683569877465)
+     (u'play', 5.495320460153676)
+     (u'ball', 5.242487000110272)
+     (u'baseball', 4.8589415941635785)
+     (u'sex', 4.28027719688245)
+     (u'football', 4.000719840713668)
+     (u'dance', 3.982062915750323)
+     (u'sport', 3.4325559724767842)
+     (u'party', 3.1430414891699057)
+
+the things most closely related to *concentrate* are
+     (u'think', 4.689255857708392)
+     (u'learn', 3.164933373685055)
+     (u'time', 2.9588034631033073)
+     (u'read', 2.9510487146079614)
+     (u'fun', 2.2426631667881503)
+     (u'relax', 1.838291420794477)
+     (u'tire', 1.4111385900716094)
+     (u'sleep', 1.2348368026045178)
+     (u'knowledge', 0.9479835576028959)
+     (u'book', 0.9272244359290244)
+
+the things most closely related to *thrill* are
+     (u'fun', 8.059844739267662)
+     (u'love', 3.0363476851592637)
+     (u'exercise', 2.3951636539241776)
+     (u'entertainment', 1.966354504472087)
+     (u'enjoyment', 1.4340291536049683)
+     (u'entertain', 1.3462785139716742)
+     (u'sport', 1.3442705962181793)
+     (u'verb', 1.253296747295495)
+     (u'good', 1.1461094891398964)
+     (u'game', 1.1432550194374713)
+
+the things most closely related to *mystery* are
+     (u'book', 2.310632853856275)
+     (u'write', 1.6842719334291307)
+     (u'read', 1.6015154181927445)
+     (u'space', 1.3301303289950859)
+     (u'something', 1.0915000286454364)
+     (u'time', 1.078244412639174)
+     (u'paper', 0.9859600848493804)
+     (u'praise', 0.9281458267195796)
+     (u'know', 0.8874488170996405)
+     (u'own house', 0.8641182227013826)
+
+the things most closely related to *death* are
+     (u'kill', 20.87944966586263)
+     (u'die', 15.673976650267573)
+     (u'death', 7.663938431269203)
+     (u'kill people', 6.792568697744296)
+     (u'person', 6.100835376099778)
+     (u'tire', 5.883330148810767)
+     (u'hurt', 5.866675371194423)
+     (u'sex', 5.076305931226887)
+     (u'run', 5.054870300084449)
+     (u'war', 4.958866014355089)
+
+the things most closely related to *ghost* are
+     (u'person', 1.7831367281933388)
+     (u'something', 0.9602581310651308)
+     (u'cat', 0.6242317378257836)
+     (u'book', 0.5613475132202729)
+     (u'place', 0.5304035102977062)
+     (u'mouse', 0.41676387390074837)
+     (u'box', 0.3287415748490618)
+     (u'kill', 0.32785710258234635)
+     (u'food', 0.3140870968025475)
+     (u'paint', 0.31337176015905704)
+
+the things most closely related to *mozart* are
+     (u'man', 4.132357592481196)
+     (u'woman', 3.4801407020214215)
+     (u'doctor', 2.781406503180892)
+     (u'student', 2.283793272541318)
+     (u'family', 2.2457627346301847)
+     (u'mother', 2.033366980543255)
+     (u'child', 1.9623731513128673)
+     (u'boy', 1.8986662832484946)
+     (u'girl', 1.8932044942863762)
+     (u'body', 1.504731041976669)
+
+the things most closely related to *music* are
+     (u'music', 154.7253720016376)
+     (u'make music', 48.041537411381334)
+     (u'play music', 39.06191591504033)
+     (u'sing', 27.628977930849718)
+     (u'dance', 21.47609004787944)
+     (u'sound', 21.18046521359655)
+     (u'song', 20.499714708073636)
+     (u'play', 20.42545726289376)
+     (u'create music', 18.053484170254098)
+     (u'listen music', 16.493928415708826)
+
+the things most closely related to *spirit* are
+     (u'drink', 4.1116636891955)
+     (u'person', 3.694947965315632)
+     (u'party', 2.9513349178621806)
+     (u'something', 2.596454357023655)
+     (u'glass', 2.306861275467024)
+     (u'human', 2.2988711404380533)
+     (u'water', 2.166820675451137)
+     (u'beer', 2.079876337146889)
+     (u'wine', 1.7668049415487574)
+     (u'man', 1.6515051607428675)
+
+the things most closely related to *scary* are
+     (u'fun', 2.2860773480478667)
+     (u'cat', 1.5380977741865887)
+     (u'nice', 1.4072645725587216)
+     (u'noun', 1.3677162892263786)
+     (u'human', 0.9650318640624845)
+     (u'something', 0.9410791915196142)
+     (u'person', 0.8940123367205165)
+     (u'animal', 0.8831515572215642)
+     (u'small', 0.7540077050610091)
+     (u'place', 0.7107612969485068)
+
+the things most closely related to *evil* are
+     (u'kill', 4.843157591544959)
+     (u'person', 4.460557266791935)
+     (u'human', 4.271563383311512)
+     (u'good', 3.1168196926913145)
+     (u'bad', 2.762921541159525)
+     (u'burn', 2.6556308722688633)
+     (u'noun', 2.6150627833669953)
+     (u'hurt', 2.5611639035896867)
+     (u'pain', 2.5437544361902606)
+     (u'gun', 2.4952628780388557)
+
+the things most closely related to *fanatic* are
+     (u'woman', 2.9982389347434117)
+     (u'man', 2.9843661385575273)
+     (u'doctor', 2.688356434999188)
+     (u'family', 2.165358717123306)
+     (u'student', 2.061473200800481)
+     (u'mother', 1.8120404342204748)
+     (u'girl', 1.6743416532266173)
+     (u'boy', 1.6235719260568577)
+     (u'dance', 1.4415463390137977)
+     (u'body', 1.4289347598228759)
+cnet_norm has no entries for spiritual path
+cnet_norm has no entries for trance
+
+the things most closely related to *meditate* are
+     (u'rest', 3.2418844424261337)
+     (u'read', 3.1980952433003886)
+     (u'relax', 2.9705587282340167)
+     (u'think', 2.953493046622576)
+     (u'sex', 2.5644390836687228)
+     (u'study', 2.382256707580125)
+     (u'sit', 2.101615532504317)
+     (u'sing', 1.9802304115782001)
+     (u'swim', 1.779760743385427)
+     (u'relaxation', 1.7619859008826695)
+
+the things most closely related to *sex* are
+     (u'sex', 258.73089444534077)
+     (u'kiss', 28.647478837034228)
+     (u'fun', 25.518510366570943)
+     (u'love', 24.685496543809553)
+     (u'procreate', 22.81806467529637)
+     (u'sleep', 22.415647468140342)
+     (u'copulate', 21.575300470032555)
+     (u'make love', 20.206222587874684)
+     (u'computer', 19.21779032023768)
+     (u'drink', 17.576945410065257)
+
+the things most closely related to *actor* are
+     (u'person', 11.482373213205154)
+     (u'seat', 7.980560595766578)
+     (u'play', 7.881903454704707)
+     (u'movie', 7.2023545893822405)
+     (u'something', 6.998951359900942)
+     (u'entertainment', 6.767470912728639)
+     (u'chair', 5.6683733041565345)
+     (u'human', 5.491970714847692)
+     (u'theater', 5.380902509553194)
+     (u'show', 5.293783765300092)
+ 
+ 
+*********associateive strength normalized (scale -1.0 to 1.0 ) ************
+ 
+
+evil : mystery	-0.484886198135	
+evil : meditate	-0.31490290146	
+actor : concentrate	-0.0949634732059	
+concentrate : movie	-0.0551475406519	
+classical music : thrill	-0.0530038207977	
+ghost : meditate	-0.051365767758	
+death : movie	-0.045494462506	
+classical music : spirit	-0.0444475484895	
+concentrate : fanatic	-0.0442990517322	
+classical music : golf	-0.0434930993371	
+golf : spirit	-0.0423824428642	
+classical music : death	-0.0407505023828	
+movie : music	-0.0403563386719	
+concentrate : mozart	-0.0368003299331	
+meditate : thrill	-0.0345759241038	
+mozart : thrill	-0.0321417274422	
+actor : death	-0.0276489057173	
+sex : thrill	-0.0272700896667	
+concentrate : ghost	-0.0254956403526	
+fanatic : music	-0.0250737757964	
+meditate : scary	-0.0211949030369	
+mozart : music	-0.0190275612037	
+ghost : golf	-0.017115173618	
+fanatic : thrill	-0.0135799776601	
+movie : mozart	-0.013351516775	
+classical music : mystery	-0.0127814228268	
+fanatic : movie	-0.0121617684183	
+golf : movie	-0.0116520445166	
+actor : golf	-0.00443872385037	
+actor : meditate	-0.00388656240693	
+death : golf	-0.0020051383774	
+ghost : music	-0.00197665215034	
+actor : ghost	-0.000767292526645	
+golf : scary	0.00113746786209	
+actor : sex	0.00221239071133	
+evil : movie	0.00224325579128	
+meditate : movie	0.00308573764637	
+fanatic : sex	0.0034815410773	
+golf : music	0.00443973387161	
+mozart : sex	0.00560697188207	
+fanatic : meditate	0.00672356861335	
+ghost : sex	0.00890015698408	
+ghost : movie	0.00921280614957	
+concentrate : music	0.0097668268161	
+meditate : mozart	0.0105040553021	
+classical music : movie	0.0116103176431	
+ghost : thrill	0.0142032624132	
+classical music : evil	0.0154216031981	
+concentrate : golf	0.0169340413765	
+actor : music	0.0202069755261	
+classical music : meditate	0.0202231245923	
+mystery : sex	0.0204171617407	
+evil : golf	0.0222454272904	
+evil : sex	0.0237263511174	
+mozart : scary	0.0237512786269	
+concentrate : sex	0.0243199453825	
+fanatic : mystery	0.0243442045396	
+movie : spirit	0.0248340647422	
+concentrate : thrill	0.0249178310203	
+golf : mystery	0.0253817045552	
+death : music	0.0263663972166	
+scary : spirit	0.0268018490784	
+mozart : mystery	0.0274730484542	
+music : spirit	0.0279763390854	
+classical music : ghost	0.0282139957423	
+golf : mozart	0.0293744631484	
+movie : sex	0.0293982431175	
+golf : thrill	0.0308117083484	
+classical music : concentrate	0.0334803576605	
+classical music : sex	0.0349648526284	
+sex : spirit	0.0371321218429	
+evil : music	0.0375017519567	
+fanatic : ghost	0.0384854370562	
+scary : sex	0.0396936728595	
+movie : thrill	0.0403486624141	
+concentrate : evil	0.0407413645569	
+ghost : mozart	0.0416114016798	
+music : thrill	0.0457677841495	
+mystery : spirit	0.0465363465326	
+music : sex	0.0499908323443	
+fanatic : golf	0.0500771672369	
+concentrate : scary	0.0502181917828	
+movie : mystery	0.0550488989034	
+movie : scary	0.0556378833635	
+death : fanatic	0.0597914705442	
+fanatic : scary	0.061040877346	
+mystery : thrill	0.0628197011439	
+mystery : scary	0.0632359136421	
+actor : spirit	0.0643466098798	
+death : mozart	0.0673105430035	
+actor : mystery	0.0708863710612	
+classical music : fanatic	0.0712877193809	
+death : meditate	0.0723379866195	
+classical music : scary	0.0771753446903	
+meditate : music	0.0786708981345	
+meditate : spirit	0.080320441648	
+music : mystery	0.0824529586418	
+actor : scary	0.0841208347466	
+concentrate : spirit	0.0847866234984	
+ghost : mystery	0.0853882810555	
+classical music : mozart	0.0879897703303	
+death : spirit	0.093796831015	
+actor : classical music	0.0952075893353	
+actor : thrill	0.107763968888	
+fanatic : spirit	0.108137377839	
+concentrate : mystery	0.108403343702	
+concentrate : death	0.111525878991	
+death : sex	0.113998106842	
+evil : spirit	0.116477872638	
+evil : ghost	0.120886961743	
+mozart : spirit	0.123885972665	
+music : scary	0.124648696786	
+spirit : thrill	0.133493330444	
+actor : evil	0.140369297775	
+evil : thrill	0.149877413107	
+ghost : spirit	0.157594895041	
+golf : sex	0.1602998463	
+death : thrill	0.163900471894	
+death : mystery	0.169649752775	
+meditate : sex	0.169773905285	
+death : scary	0.192251317079	
+death : ghost	0.212988810892	
+concentrate : meditate	0.281256764018	
+death : evil	0.310890693716	
+evil : mozart	0.320082208576	
+scary : thrill	0.329497072724	
+evil : fanatic	0.344025531766	
+ghost : scary	0.35229563441	
+evil : scary	0.387925783174	
+actor : mozart	0.389440433098	
+actor : fanatic	0.398646909949	
+golf : meditate	0.482689152036	
+meditate : mystery	0.493812606879	
+classical music : music	0.509280069641	
+actor : movie	0.73733644148	
+fanatic : mozart	0.978969404634	
+
+
+
+
+classical music : thrill	-0.0530038207977	
+classical music : spirit	-0.0444475484895	
+classical music : golf	-0.0434930993371	
+classical music : death	-0.0407505023828	
+classical music : mystery	-0.0127814228268	
+classical music : movie	0.0116103176431	
+classical music : evil	0.0154216031981	
+classical music : meditate	0.0202231245923	
+classical music : ghost	0.0282139957423	
+classical music : concentrate	0.0334803576605	
+classical music : sex	0.0349648526284	
+classical music : fanatic	0.0712877193809	
+classical music : scary	0.0771753446903	
+classical music : mozart	0.0879897703303	
+classical music : actor	0.0952075893353	
+classical music : music	0.509280069641	
+
+movie : concentrate	-0.0551475406519	
+movie : death	-0.045494462506	
+movie : music	-0.0403563386719	
+movie : mozart	-0.013351516775	
+movie : fanatic	-0.0121617684183	
+movie : golf	-0.0116520445166	
+movie : evil	0.00224325579128	
+movie : meditate	0.00308573764637	
+movie : ghost	0.00921280614957	
+movie : spirit	0.0248340647422	
+movie : sex	0.0293982431175	
+movie : thrill	0.0403486624141	
+movie : mystery	0.0550488989034	
+movie : scary	0.0556378833635	
+movie : actor	0.73733644148	
+
+golf : spirit	-0.0423824428642	
+golf : ghost	-0.017115173618	
+golf : movie	-0.0116520445166	
+golf : actor	-0.00443872385037	
+golf : death	-0.0020051383774	
+golf : scary	0.00113746786209	
+golf : music	0.00443973387161	
+golf : concentrate	0.0169340413765	
+golf : evil	0.0222454272904	
+golf : mystery	0.0253817045552	
+golf : mozart	0.0293744631484	
+golf : thrill	0.0308117083484	
+golf : fanatic	0.0500771672369	
+golf : sex	0.1602998463	
+golf : meditate	0.482689152036	
+
+concentrate : actor	-0.0949634732059	
+concentrate : movie	-0.0551475406519	
+concentrate : fanatic	-0.0442990517322	
+concentrate : mozart	-0.0368003299331	
+concentrate : ghost	-0.0254956403526	
+concentrate : music	0.0097668268161	
+concentrate : golf	0.0169340413765	
+concentrate : sex	0.0243199453825	
+concentrate : thrill	0.0249178310203	
+concentrate : evil	0.0407413645569	
+concentrate : scary	0.0502181917828	
+concentrate : spirit	0.0847866234984	
+concentrate : mystery	0.108403343702	
+concentrate : death	0.111525878991	
+concentrate : meditate	0.281256764018	
+
+thrill : meditate	-0.0345759241038	
+thrill : mozart	-0.0321417274422	
+thrill : sex	-0.0272700896667	
+thrill : fanatic	-0.0135799776601	
+thrill : ghost	0.0142032624132	
+thrill : concentrate	0.0249178310203	
+thrill : golf	0.0308117083484	
+thrill : movie	0.0403486624141	
+thrill : music	0.0457677841495	
+thrill : mystery	0.0628197011439	
+thrill : actor	0.107763968888	
+thrill : spirit	0.133493330444	
+thrill : evil	0.149877413107	
+thrill : death	0.163900471894	
+thrill : scary	0.329497072724	
+
+mystery : evil	-0.484886198135	
+mystery : sex	0.0204171617407	
+mystery : fanatic	0.0243442045396	
+mystery : golf	0.0253817045552	
+mystery : mozart	0.0274730484542	
+mystery : spirit	0.0465363465326	
+mystery : movie	0.0550488989034	
+mystery : thrill	0.0628197011439	
+mystery : scary	0.0632359136421	
+mystery : actor	0.0708863710612	
+mystery : music	0.0824529586418	
+mystery : ghost	0.0853882810555	
+mystery : concentrate	0.108403343702	
+mystery : death	0.169649752775	
+mystery : meditate	0.493812606879	
+
+death : movie	-0.045494462506	
+death : actor	-0.0276489057173	
+death : golf	-0.0020051383774	
+death : music	0.0263663972166	
+death : fanatic	0.0597914705442	
+death : mozart	0.0673105430035	
+death : meditate	0.0723379866195	
+death : spirit	0.093796831015	
+death : concentrate	0.111525878991	
+death : sex	0.113998106842	
+death : thrill	0.163900471894	
+death : mystery	0.169649752775	
+death : scary	0.192251317079	
+death : ghost	0.212988810892	
+death : evil	0.310890693716	
+
+ghost : meditate	-0.051365767758	
+ghost : concentrate	-0.0254956403526	
+ghost : golf	-0.017115173618	
+ghost : music	-0.00197665215034	
+ghost : actor	-0.000767292526645	
+ghost : sex	0.00890015698408	
+ghost : movie	0.00921280614957	
+ghost : thrill	0.0142032624132	
+ghost : fanatic	0.0384854370562	
+ghost : mozart	0.0416114016798	
+ghost : mystery	0.0853882810555	
+ghost : evil	0.120886961743	
+ghost : spirit	0.157594895041	
+ghost : death	0.212988810892	
+ghost : scary	0.35229563441	
+
+mozart : concentrate	-0.0368003299331	
+mozart : thrill	-0.0321417274422	
+mozart : music	-0.0190275612037	
+mozart : movie	-0.013351516775	
+mozart : sex	0.00560697188207	
+mozart : meditate	0.0105040553021	
+mozart : scary	0.0237512786269	
+mozart : mystery	0.0274730484542	
+mozart : golf	0.0293744631484	
+mozart : ghost	0.0416114016798	
+mozart : death	0.0673105430035	
+mozart : spirit	0.123885972665	
+mozart : evil	0.320082208576	
+mozart : actor	0.389440433098	
+mozart : fanatic	0.978969404634	
+
+music : movie	-0.0403563386719	
+music : fanatic	-0.0250737757964	
+music : mozart	-0.0190275612037	
+music : ghost	-0.00197665215034	
+music : golf	0.00443973387161	
+music : concentrate	0.0097668268161	
+music : actor	0.0202069755261	
+music : death	0.0263663972166	
+music : spirit	0.0279763390854	
+music : evil	0.0375017519567	
+music : thrill	0.0457677841495	
+music : sex	0.0499908323443	
+music : meditate	0.0786708981345	
+music : mystery	0.0824529586418	
+music : scary	0.124648696786	
+
+spirit : golf	-0.0423824428642	
+spirit : movie	0.0248340647422	
+spirit : scary	0.0268018490784	
+spirit : music	0.0279763390854	
+spirit : sex	0.0371321218429	
+spirit : mystery	0.0465363465326	
+spirit : actor	0.0643466098798	
+spirit : meditate	0.080320441648	
+spirit : concentrate	0.0847866234984	
+spirit : death	0.093796831015	
+spirit : fanatic	0.108137377839	
+spirit : evil	0.116477872638	
+spirit : mozart	0.123885972665	
+spirit : thrill	0.133493330444	
+spirit : ghost	0.157594895041	
+
+scary : meditate	-0.0211949030369	
+scary : golf	0.00113746786209	
+scary : mozart	0.0237512786269	
+scary : spirit	0.0268018490784	
+scary : sex	0.0396936728595	
+scary : concentrate	0.0502181917828	
+scary : movie	0.0556378833635	
+scary : fanatic	0.061040877346	
+scary : mystery	0.0632359136421	
+scary : actor	0.0841208347466	
+scary : music	0.124648696786	
+scary : death	0.192251317079	
+scary : thrill	0.329497072724	
+scary : ghost	0.35229563441	
+scary : evil	0.387925783174	
+
+evil : mystery	-0.484886198135	
+evil : meditate	-0.31490290146	
+evil : movie	0.00224325579128	
+evil : golf	0.0222454272904	
+evil : sex	0.0237263511174	
+evil : music	0.0375017519567	
+evil : concentrate	0.0407413645569	
+evil : spirit	0.116477872638	
+evil : ghost	0.120886961743	
+evil : actor	0.140369297775	
+evil : thrill	0.149877413107	
+evil : death	0.310890693716	
+evil : mozart	0.320082208576	
+evil : fanatic	0.344025531766	
+evil : scary	0.387925783174	
+
+fanatic : concentrate	-0.0442990517322	
+fanatic : music	-0.0250737757964	
+fanatic : thrill	-0.0135799776601	
+fanatic : movie	-0.0121617684183	
+fanatic : sex	0.0034815410773	
+fanatic : meditate	0.00672356861335	
+fanatic : mystery	0.0243442045396	
+fanatic : ghost	0.0384854370562	
+fanatic : golf	0.0500771672369	
+fanatic : death	0.0597914705442	
+fanatic : scary	0.061040877346	
+fanatic : spirit	0.108137377839	
+fanatic : evil	0.344025531766	
+fanatic : actor	0.398646909949	
+fanatic : mozart	0.978969404634	
+
+meditate : evil	-0.31490290146	
+meditate : ghost	-0.051365767758	
+meditate : thrill	-0.0345759241038	
+meditate : scary	-0.0211949030369	
+meditate : actor	-0.00388656240693	
+meditate : movie	0.00308573764637	
+meditate : fanatic	0.00672356861335	
+meditate : mozart	0.0105040553021	
+meditate : death	0.0723379866195	
+meditate : music	0.0786708981345	
+meditate : spirit	0.080320441648	
+meditate : sex	0.169773905285	
+meditate : concentrate	0.281256764018	
+meditate : golf	0.482689152036	
+meditate : mystery	0.493812606879	
+
+sex : thrill	-0.0272700896667	
+sex : actor	0.00221239071133	
+sex : fanatic	0.0034815410773	
+sex : mozart	0.00560697188207	
+sex : ghost	0.00890015698408	
+sex : mystery	0.0204171617407	
+sex : evil	0.0237263511174	
+sex : concentrate	0.0243199453825	
+sex : movie	0.0293982431175	
+sex : spirit	0.0371321218429	
+sex : scary	0.0396936728595	
+sex : music	0.0499908323443	
+sex : death	0.113998106842	
+sex : golf	0.1602998463	
+sex : meditate	0.169773905285	
+
+actor : concentrate	-0.0949634732059	
+actor : death	-0.0276489057173	
+actor : golf	-0.00443872385037	
+actor : meditate	-0.00388656240693	
+actor : ghost	-0.000767292526645	
+actor : sex	0.00221239071133	
+actor : music	0.0202069755261	
+actor : spirit	0.0643466098798	
+actor : mystery	0.0708863710612	
+actor : scary	0.0841208347466	
+actor : thrill	0.107763968888	
+actor : evil	0.140369297775	
+actor : mozart	0.389440433098	
+actor : fanatic	0.398646909949	
+actor : movie	0.73733644148	

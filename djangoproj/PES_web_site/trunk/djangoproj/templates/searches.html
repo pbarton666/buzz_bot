@@ -1,0 +1,13 @@
+<h1> Dogma Searches </h1>
+<ul>
+{% if outputDir %}
+  <li> Search Number </li>
+  {% for o in outputDir %}
+  <li>{{o.include}} </li>
+  {% endfor %}
+{% else %}
+  <li> Sorry, Dogma has no searches </li>
+{% endif %}
+</ul>
+
+

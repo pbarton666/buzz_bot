@@ -1,0 +1,10 @@
+This dir has all the html to server the main part of the PES site, which has static content,
+from port 80.  The intereactive, Djano-enabled piece will be served separately (as a frame
+within the main site) from a another port.
+
+This might be funky, but it's the solution I came up with to have Django work and play will
+with a frame-oriented environment.  OK.  Why a frame-oriented environment?  Because I want
+causal visitors to the site to be able to pull up Buzz crawler results to see that we're
+doing something in this area (hence need access to dynamic content).  
+
+There's probably a better way, but this works.

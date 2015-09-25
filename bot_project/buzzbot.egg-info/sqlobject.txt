@@ -1,0 +1,2 @@
+db_module=buzzbot.model
+history_dir=$base/buzzbot/sqlobject-history

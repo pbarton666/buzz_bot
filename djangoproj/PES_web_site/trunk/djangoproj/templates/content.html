@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+
+  <link href="/media/style.css" type="text/css" rel="stylesheet">
+  
+	<SCRIPT TYPE="text/javascript">
+	<!--
+	function popup(mylink, windowname)
+	{
+	if (! window.focus)return true;
+	var href;
+	if (typeof(mylink) == 'string')
+	   href=mylink;
+	else
+	   href=mylink.href;
+	window.open(href, windowname, 'width=400,height=400,scrollbars=yes,resizable=yes,left=50,top=20');
+	return false;
+	}
+	//-->
+	</SCRIPT>  
+  </head>
+
+
+
+<!--we're injecting a list of dict from views.viewContentByCriteria (from) dbMethods.getContentAndUrlForCriteria
+   [  { (url, first, score, totalRecords, content as dict(id,content,dateacquired,dateposted,shortcont,criteriaid) }  ]
+-->
+
+<body  background="/media/dark-green.jpg">
+
+	<form method="post">
+
+		<!-- hidden field for indexing -->
+		<input type="hidden" name="first" value={{ first }}  >	</input>
+
+		<table>
+		
+			<tr>
+				<td>
+					<img src="/media/firefly.jpg" height="60px" width="60px"></img>
+				</td>
+				<td class="nav-header">
+					We found these bits of content ...
+				</td>
+			</tr>	
+		</table>
+		
+		<div class="buzzdiv">
+			<table>	
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						<table class="buzztable">
+							<tr >
+								<th class="buzzhead">
+									{% if showBack %}
+										
+										<input type='image'
+											name='backRequested'
+											src="/media/back-small.gif" height="20px"  width="20px" 
+											alt="showBack"
+											/>											
+										<img src="/media/spacer-maroon.jpg" height="20px" vertical-align="text-top" width="40px" ></img>	
+									{% else %}	
+										
+									{% endif %}	
+									
+									Content 
+									
+									{% if showNext %}
+										<img src="/media/spacer-maroon.jpg" height="20px" vertical-align="text-top" width="40px" ></img>
+										<input type='image'
+											name='nextRequested'
+											src="/media/next-small.gif" height="20px" vertical-align="text-top" width="20 px" 
+											label="showNext"
+											/>
+										
+										{% else %}
+
+									{% endif %}	
+									
+								</th>
+								<th class="buzzhead">Score</th> 
+								<th class="buzzhead">Posted</th>
+								<th class="buzzhead">Acquired</th>
+								<th class="buzzhead"></th>
+							</tr>
+		
+							{% for data in form %}
+							<tr class="{% cycle 'odd' 'even' as rowcolors %}">
+								<td class="buzzdataleft" width="500px" > {{data.cont.content}}  </td>
+								<td class="buzzdatacenter" width="50x"> {{ data.score }}      </td>
+								<td class="buzzdataleft" width="50px">  {{ data.cont.dateposted|date:"D, d M Y" }}  </td>
+								<td class="buzzdataleft" width="50px">  {{ data.cont.dateacquired|date:"D, d M Y" }}    </td>
+								<td class="buzzdatacenter" width="50px"> <a href="{{ data.url}}" onClick="return popup(this, 'source')"> vist</a>  </td>	
+							</tr>
+							{% endfor%}
+						</table>	 <!-- main content table -->
+					</td>
+				</tr>
+			</table>	<!-- outer table -->
+		</div>
+	</form>
+</body>

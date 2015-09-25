@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!--Base template for all pages in site -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link href="media/style.css" type="text/css" rel="stylesheet">
+  </head>
+
+
+<!-- <body>  -->
+
+<FRAMESET rows="20%, 80%">
+      <FRAME src="header.html">
+
+  <FRAMESET cols="100, 200">
+      <FRAME src="contents_of_frame2.gif">
+  </FRAMESET>
+  <div class="header">
+ 	<img class="peslogo" src="media/pes.jpg" alt="PES"></img>
+        <img class="earthspacer" src="media/spacer-maroon.jpg"></img>
+        <img class="earthlogo" src="media/kirby_earth.pes.JPG" alt="PES"></img> 
+
+  </div>
+
+    <div class="header">
+      <!--  <div class="banner_text"> Portland Energy Strategies</div> -->
+    </div>
+         <title class="content_title>{% block content_title %}{% endblock %}</title>
+         {% block content_left %}   {% endblock %}
+         {% block content_top %}    {% endblock %}
+         {% block content_bottom %} {% endblock %}
+         {% block footer %}         {% endblock %}
+
+<!--   </body>  -->
+</html>

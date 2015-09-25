@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;
+			charset=iso-8859-1" />
+		<link href="media/style.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<!-- pull in the header, css, etc. from base.html; then do a background fill; then add the content -->
+	<body  background="/media/dark-green.jpg">
+	
+		<!--main container table has two columns (search and screening criteria) separated by a blank one-->
+		<table class="search-term-table"> <!--main container table-->
+		
+			<tr>  <!--row for the main elements (search and screening criteria) -->
+				<td><!--data element for search criteria-->
+					<form action="../editCriteria/{{criteria.id}}" method="POST"> <!--form for search criteria-->
+						<input type='hidden' name='criteriaid' value={{criteria.id}}>
+			
+						<table class="search-table">  <!--table for search criteria (elements:  ? image, label, input)-->	
+							<tr class="search-status-row"> <!--page title row-->
+								<td></td>
+								<td> </td>
+								<td><u>Secondary Screening Criteria </u></td>				
+							</tr> <!--end of status row-->
+						
+							<tr class="search-input-row"> <!--search title row-->
+								<td></td>
+								<td>Title</td>
+								<td> <textarea name="title" cols="40" rows="1" height="2px"
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{criteria.title}}</textarea> 
+								</td>				
+							</tr> <!--end of title row-->	
+				
+							<tr class="search-input-row"> <!--include row-->
+								<td>  </td>
+								<td>Search<br>Terms e.g.,<br> (dog, cat)</td>
+						
+								<td><textarea name="include" cols="40" rows="2" 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{criteria.include}}</textarea> 
+								</td>				
+							</tr> <!--end of include row-->		
+					
+							<tr class="search-input-row"> <!--and/or selection row-->
+								<td></td>
+								<td></td>
+								<td> Use all terms i.e., use "AND"? {{search.andor}}
+									<input type="checkbox" name="andor" 
+										{% if criteria.andor %} checked="checked"  {% endif %} 
+										{% if not isowner %} disabled="disabled"  {% endif %}
+									/>
+								</td>				
+							</tr> <!--end of and/or selection row-->		
+
+							<tr class="search-input-row"> <!--exclude row-->
+								<td>  </td>
+								<td>Exclusion<br>Terms</td>
+								<td><textarea name="exclude" cols="40" rows="2" 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									>{{criteria.exclude}}</textarea> 
+								</td>			
+							</tr> <!--end of exclude row-->		
+								
+							<tr class="search-input-row" > <!--share row-->
+							<td> </td>
+								<td colspan="3">Share this? 
+									<input type="checkbox" name="ispublic"
+									{% if criteria.ispublic %} checked="checked" {% endif %} 
+									{% if not isowner %} disabled="disabled"  {% endif %}
+									/>
+								</td>
+							</tr> <!--end of share row-->	
+					
+							<tr ><td>&nbsp;</td></tr> <!--null spacer row-->								
+					
+							<tr > <!--button row-->
+								<td></td>
+								<td></td>
+								<td >
+									<input type="submit"  name = "thisAction" value ="update" {% if not isowner %} disabled="disabled"  {% endif %} /> 
+									&nbsp;
+									<input type="submit"  name = "thisAction" value ="revert" {% if not isowner %} disabled="disabled"  {% endif %}/> 
+									&nbsp;
+									<input type="submit"  name = "thisAction" value ="return" /> 												
+								</td>			
+							</tr> <!--end ofbutton row-->								
+									
+							<tr class="search-input-row" > <!--management options row-->
+								<td></td>
+								<td >Management<br>Options </td>
+								<td width="10px">
+									<select style="font-size:10px;font-family:Arial;width:250px" name="thisAction"  
+										onchange=submit() 
+										{% if not isowner %} disabled="disabled" {% endif %}>
+									<option > --select--</option>
+									<option value="clearContent" >clear all content for this criterion</option>
+									</select>				
+								</td>											
+							</tr> <!--end of management options row--->
+							
+							<tr class="search-input-row" > <!--status row-->
+								<td></td>
+								<td>Status</td>
+								<td >
+									Content bits: {{contentcount}}
+								</td>			
+							</tr> <!--end of status row-->	
+											
+					
+						</table>  <!--end of search input table-->
+					</form>  <!--end of the search criteria form-->
+		
+				</td> <!--end of data element for search criteria-->
+			
+				<td> 
+				    <!-- empty data element separating search specs and criteria-->
+				</td> 
+		
+
+				
+			</tr>	<!--end of row of the main container table-->			
+		</table> <!--  end of main container table-->
+	
+	</body>
+</html>

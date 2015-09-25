@@ -1,0 +1,25 @@
+<--feed this three dicts:
+ -table_row_headers (row headers)
+ -table_fields (field names from database)
+ -table_content (search return object)
+   ...should create a table with any number of columns
+-->
+
+<div class="table_search">
+   <span class="table_title"> </span>
+   <table>
+     <tr>
+        {%for r in table_row_headers%}
+        <td> {r}  </td>
+        {%endfor%}
+     </tr>    
+     {%for c in table_content%}
+     <tr>
+        {%for r in table_row_headers%}
+        <td> {r}  </td>
+        {%endfor%}
+     </tr>
+    {%endfor}
+   </table>
+</dive>
+     

@@ -1,0 +1,17 @@
+
+--This line, and those below, will be ignored--
+
+AM   tensor.gz
+A    db_config.py
+A    djangoapp/jeff_cnet_2.py
+A    test-django.py
+A    cnet_utilities.py
+AM   settings.pes.py
+A    playWithCnet.wpr
+A    users.py
+D    jeff_cnet_2.py
+A    analyze_text.py
+A    db_password.py
+A    wingproj.wpr
+A    drugrun.py
+A    forms_auth_referenceOnly.py

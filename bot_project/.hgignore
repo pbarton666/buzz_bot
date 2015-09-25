@@ -1,0 +1,11 @@
+syntax: glob
+
+*.diff
+*.log
+*.pyc
+*.swp
+*.tmp
+buzzbot.wpr
+eggs/*.egg-tmp
+local.cfg
+tags

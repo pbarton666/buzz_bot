@@ -1,0 +1,487 @@
+/* CSS for text mining results */
+
+/* a palatte of colors can be found at http://msdn2.microsoft.com/en-us/library/aa358800(VS.85).aspx */
+/* F0F8FF     sort of sliver*/
+/* #87CEFA;   sky blue*/
+/* #F0F8FF;   Alice blue*/		    
+/* #aaa       dark gray */ 
+/* #ddd       dark gray */
+/* #eee       silvery gray */
+/* #F0E68C      khaki*/
+
+
+  html {			    /* outermost frame, fills all unspecified space */
+    color: orange ;		    /* comment */ 
+    background-color: white;	    /* #ADD8E6 is light blue */ 
+    font: x-small "Lucida Grande", "Lucida Sans Unicode", geneva, verdana, sans-serif;
+    margin: 0;			    /* space to the outside of the frame */ 
+    padding: 1px;		    /* empty space inside this element colored as self.background */ 
+  }  
+  
+   body {			    /* embedded in html and fills the width of the browser window */
+    color: red ;		    /* comment */ 
+    background-color: white;	    /* #ddd is a light gray */ 
+    width: 750px;			  /* width of the background panel */ 
+    font: x-small "Lucida Grande", "Lucida Sans Unicode", geneva, verdana, sans-serif;
+    margin: 0;			    /* comment */ 
+    padding: 1px;		    /* margine to the edge of the browser window (left/right) */ 
+  }
+  
+  #main_content	{		    /* main tg canvas embedded in 'body'*/
+    color: black;  		    /* font color */ 
+    font-size: 127%;		    /* pct of normal */ 
+    background-color: white;	    /* comment */ 
+    width: 750px;		    /* width of the background panel */ 
+    margin: 0 auto 0 auto;	    /* comment */ 
+    border-left: 0px solid #aaa;    /* aaa is dark gray */ 
+    border-right: 0px solid #aaa;   /* comment */ 
+    padding: 1px;		    /* basically a margin around everything */
+  }
+  
+      /* some cool buttons from http://www.dynamicdrive.com/style/csslibrary/item/css_oval_buttons/  */      
+      
+      input.ovalbutton span{
+      background: transparent url('/static/images/oval-orange-right.gif') no-repeat top right;
+      display: block;
+      padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+      }
+      
+      
+      .buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
+      overflow: hidden; 
+      width: 100%;
+      }
+      
+	a.ovalbutton{
+	background: transparent url('/static/images/oval-orange-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 13px Tahoma; /* Change 13px as desired */
+	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+	height: 24px; /* Height of button background height */
+	padding-left: 11px; /* Width of left menu image */
+	text-decoration: none;
+	}
+	
+	a:link.ovalbutton, a:visited.ovalbutton, a:active.ovalbutton{
+	color: #494949; /*button text color*/
+	}
+	
+	a.ovalbutton span{
+	background: transparent url('/static/images/oval-orange-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+	}
+	
+	a.ovalbutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+	}
+	
+	a.ovalbutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+	}
+	
+	.buttonwrapper{ 
+	overflow: hidden; 
+	width: 100%;
+	}
+      
+    
+    a.link, a, a.active { color: #369; }	  /* font color */  
+    
+    h1 {font-size: 100%;}
+    h2 {font-size: 150%;}
+    h3 {font-size: 200%;}
+    h4 {font-size: 250%;}
+    h5 {font-size: 350%;}
+    h6 {font-size: 400%;}
+
+	table{					    /* master (default) table style  */
+	  border: 2px solid orange;		    
+	  /*border-left: 1px solid #aaa;  */	    /* 1px solid #aaa;  aaa is dark gray (overrides border) */
+	  background-color:  #F0E68C      ;         /* background color for cell grid, top, sides, etc. */ 
+	  width: 600px;
+	  height: 100px;
+	  margin: 20px;
+	  padding: 0px;
+	}	
+		table td{			   /* cell style (default) */
+		background-color: #F0E68C          /* #f0f0f0 is silverish */
+		}	  	   
+		.somelabel	{		   /* cell style (set class="somelabel")*/	
+		   color: #000000;    
+		   text-align: left;    
+		   background-color: #F0F8FF;	    /*light blue ("AliceBlue")*/
+		   }	  		
+		table th{			    /* header style (default) */	
+		  background-color: #F0E68C;	    /*sky blue*/
+		  } 
+
+		  
+	table.outer_table{			    /* outer table style  */
+	  border: 10px solid black;		    
+	  border-left: 1px solid #aaa;		    
+	  background-color: #87ceeb;		    
+	  width: 600px;
+	  margin: 10px;
+	  padding: 10px;
+	}	
+		td.outer_table{			    
+		background-color: #F0E68C;	    /*F0E68C khaki*/	    
+		}	  	   	  		
+		th.outer_table{			    /* header style (default) */	
+		  background-color: #F0F8FF;	    /*sky blue*/
+		  }		
+		  
+		  							
+	table.inner_table{			    /* inner table style  */
+	  border: 0px solid #87ceeb;		    
+	  border-left: 0px ;
+	  border-top: 0px;             
+	  background-color:#87ceeb;			   
+	  width: 500px;
+	  margin: 0px;
+	  padding: 0px;	  
+	}	
+		td.inner_table{			   
+		background-color: red;           
+		border: 0px solid black;
+		}	  	   	  		
+		th.inner_table{			    
+		  background-color: #87CEFA;	    /*sky blue*/
+		  border: 0px solid black;    
+		  }
+		  
+
+	table.sidebar_table{			    /* sidebar table style  */
+	  border: 0px solid black;		   
+	  background-color: #F0F8FF;		   
+	  width: 100px;
+	  margin: 10px;
+	  padding: 10px;	  
+	}	
+		td.sidebar_table{			   
+		  border: 10px;
+		  padding: 10px;
+		  margin: 10px;
+		}	
+		tr.sidebar_table{			   
+		  border: 10px;
+		  padding: 10px;
+		  margin: 10px;
+		}		
+		th.sidebar_table{		    	
+		  background-color: #87CEFA;	  
+		  }
+
+ /* #notation is used for element ids */
+	table#results{
+	background-color: #00ccff; 
+	}
+
+/************************ login box specifications *************************** */
+	
+	#loginBox
+	{
+		width: 55%;
+		margin-left: 5%;
+		margin-top: 5%;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 0%;
+		padding-bottom: 5%;
+		font-family: verdana;
+		font-size: 10px;
+		background-color: #F0E68C;  /* silverish */ 
+		border: 2px solid #ccc;
+	}
+
+	#loginBox h1 				
+	{
+		font-size: 30px;
+		font-family: "Trebuchet MS";
+		margin: 5%;
+		color: orange;
+	}
+
+	#loginBox p
+	{
+		position: relative;
+		top: -1.5em;                    /*an 'em' is the height of the font*/
+		padding-left: 4em;
+		font-size: 12px;
+		margin: 0;
+		color: #666;
+	}
+
+	#loginBox table
+	{
+		table-layout: fixed;
+		border-spacing: 0;
+		width: 100%;
+	}
+
+	#loginBox td.label
+	{
+		width: 33%;
+		text-align: right;
+	}
+
+	#loginBox td.field
+	{
+		width: 66%;
+	}
+
+	#loginBox td.field input
+	{
+		width: 100%;
+	}
+
+	#loginBox td.buttons
+	{
+		text-align: right;
+		color: orange;
+	}
+
+table.login_header_table{			    /* login table style  */
+  border: 0px solid #87ceeb;		    
+  border-left: 0px ;
+  border-top: 0px;             
+  background-color: white;
+  color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;	  
+}	
+	th.login_header_table{		    	
+	  background-color: #87CEFA;	  
+	  }
+	tr.login_header_table{		    	
+	  background-color: #87CEFA;	  
+	  }  
+	tr.login_header_table{		    	
+	  background-color: #87CEFA;	  
+	  }
+
+	h1.login_header_table{		
+		font-size: 3px;
+		font-family: "Trebuchet MS";
+		margin: 5%;
+		color: purple;
+	}		  
+
+#login_header_table	h1{
+	font-size: 3px;
+	}
+#login_header_table td{
+	font-size: 3px;
+	}	
+	
+/************************ Lp bundles specifications *************************** */
+	
+	#bundleBox
+	{
+		width: 80%;
+		margin: auto;
+		margin-left: 5%;
+		margin-top: 5%;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 0%;
+		padding-bottom: 5%;
+		font-family: verdana;
+		font-size: 20px;
+		background-color: #F0E68C;
+		border: 2px solid #ccc;
+		overflow: auto;
+	}
+	#checkbox{
+		width: 1px;
+		}
+
+	#bundleBox h1 				/*  */ 
+	{
+		font-size: 25px;
+		font-family: "Trebuchet MS";
+		margin: 1%;
+		color: orange;
+	}
+	#bundleBox h2
+	{
+		margin-top:0px;
+		margin-bottom: 0px;
+		font-size: 20px;
+		font-family: "Trebuchet MS";
+		color: orange;
+	}			
+
+	#bundleBox p
+	{
+		position: relative;
+		top: -1.5em;
+		padding-bottom: 0px;
+		padding-left: 4em;
+		font-size: 12px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		color: orange;
+	}
+
+	#bundleBox table
+	{
+		font-size: 10px;
+		table-layout: fixed;
+		border-spacing: 0;
+		width: 90%;
+		margin-top: 0%;
+		margin-bottom: 10px;
+	}
+
+
+	#bundleBox checkbox
+	{
+		width: 1%;
+		text-align: left;
+		font-size: 1px;
+		padding-bottom: 2px;
+	}
+	#bundleBox th
+	{
+		width: 33%;
+		text-align: left;
+		font-size: 12px;
+		padding-bottom: 2px;
+	}
+
+	#bundleBox td.label
+	{
+		width: 33%;
+		text-align: right;
+	}
+
+	#bundleBox td.field
+	{
+		width: 66%;
+	}
+
+	#bundleBox td.field input
+	{
+		width: 100%;
+	}
+
+	#bundleBox td.buttons
+	{
+		text-align: right;
+		color: orange;
+	}
+	#searchTable th{
+	color: blue;
+	width: 80px;
+	text-align: left;
+	}
+#searchTableDiv {
+	overflow: auto;
+	height: 300px;
+	}
+	
+
+
+/************************  specifications *************************** */			
+
+	#searchBox
+	{
+		width: 80%;
+		margin: auto;
+		margin-left: 5%;
+		margin-top: 5%;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 0%;
+		padding-bottom: 5%;
+		font-family: verdana;
+		font-size: 20px;
+		background-color: #F0E68C;
+		border: 2px solid #ccc;
+	}
+
+	#searchBox h1 				/*  */ 
+	{
+		font-size: 25px;
+		font-family: "Trebuchet MS";
+		margin: 1%;
+		color: orange;
+	}
+	#searchBox h2
+	{
+		margin-top:0px;
+		margin-bottom: 0px;
+		font-size: 20px;
+		font-family: "Trebuchet MS";
+		color: orange;
+	}
+	#searchBox h3
+	{
+		margin-top:0px;
+		margin-bottom: 0px;
+		font-size: 15px;
+		font-family: "Trebuchet MS";
+		color: red;
+	}	
+
+	#searchBox p
+	{
+		position: relative;
+		top: -1.5em;
+		padding-bottom: 0px;
+		padding-left: 4em;
+		font-size: 12px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		color: orange;
+	}
+
+	#searchBox table
+	{
+		font-size: 10px;
+		table-layout: fixed;
+		border-spacing: 0;
+		width: 90%;
+		margin-bottom: 0;
+		padding-left: 5px;
+		margin-left: 25px;
+		overflow-y:auto;
+	}
+
+	#searchBox tr
+	{
+		margin:0px;
+		padding:0px;
+		color: red;        /*this is the font color*/
+	}
+
+	#editTable{
+		margin:0;
+		padding:0;
+		height: 60px;
+		}
+	#actionTable{
+		margin-bottom:20;
+		padding-bottom:100;
+		height: 60px;
+		}
+
+	#searchBoxlab{
+		width:30;
+		}
+	#OKCancelText{
+		font-size:20px;
+		color: orange;		
+		}
+		
+
+table.btnTable{
+		width: 10px;
+		height: 10px;
+		border-width: 0;
+		}

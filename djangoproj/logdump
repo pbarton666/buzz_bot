@@ -1,0 +1,415 @@
+------------------------------------------------------------------------
+r80 | pat | 2010-03-02 14:17:31 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/main/social.html
+
+fixed links to django content
+------------------------------------------------------------------------
+r79 | pat | 2010-03-02 13:52:56 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/main/dsm.html
+   M /django/trunk/djangoproj/main/social.html
+
+removed localhost urls, updated social.html
+------------------------------------------------------------------------
+r78 | pat | 2010-03-02 12:41:49 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/config/deploy/moira.rb
+   M /django/trunk/djangoproj/main/social.html
+   M /django/trunk/djangoproj/templates/displaySubSearches.html
+
+removed modify option from displaySubSearches.html and pointed ebuzz link to pes.com
+------------------------------------------------------------------------
+r77 | pat | 2010-03-02 09:58:17 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/db
+   A /django/trunk/djangoproj/db/dbSchema.sql
+   A /django/trunk/djangoproj/db/readme
+
+added db schema dump to repo
+------------------------------------------------------------------------
+r76 | pat | 2010-03-02 09:02:44 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/media/bio.ajith.html
+   A /django/trunk/djangoproj/media/bio.dianne.html
+   A /django/trunk/djangoproj/media/bio.kirby.html
+   A /django/trunk/djangoproj/media/bio.leej.html
+   A /django/trunk/djangoproj/media/bio.pat.html
+
+added bio placeholders
+------------------------------------------------------------------------
+r75 | pat | 2010-03-02 08:57:59 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/main/coreteam.html
+
+fixed typo in core team page
+------------------------------------------------------------------------
+r74 | pat | 2010-03-02 08:54:15 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/main/coreteam.html
+
+set team photo width to 75
+------------------------------------------------------------------------
+r73 | pat | 2010-03-02 08:50:19 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/media/dianne.jpg
+   D /django/trunk/djangoproj/media/images
+   A /django/trunk/djangoproj/media/kirby.jpg
+   A /django/trunk/djangoproj/media/leej.jpg
+   A /django/trunk/djangoproj/media/pat.jpg
+
+actually added photos to repo
+------------------------------------------------------------------------
+r72 | pat | 2010-03-02 08:26:27 -0800 (Tue, 02 Mar 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/djangoapp/views.py
+   M /django/trunk/djangoproj/main/coreteam.html
+   M /django/trunk/djangoproj/main/social.html
+   M /django/trunk/djangoproj/media/Ajith_Kumar.jpg
+
+upgraded photos, searches view defaults to public only
+------------------------------------------------------------------------
+r71 | pat | 2010-02-26 13:33:43 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/djangoapp/views.py
+   D /django/trunk/djangoproj/media/forward-small.gif
+   D /django/trunk/djangoproj/media/forward-small.gold.gif
+   A /django/trunk/djangoproj/media/next-small.gif (from /django/trunk/djangoproj/media/forward-small.gif:63)
+   A /django/trunk/djangoproj/media/next-small.gold.gif (from /django/trunk/djangoproj/media/forward-small.gold.gif:63)
+   M /django/trunk/djangoproj/media/style.css
+   M /django/trunk/djangoproj/templates/content.html
+   D /django/trunk/djangoproj/templates/images
+
+fixed content page
+------------------------------------------------------------------------
+r70 | pat | 2010-02-26 11:56:21 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/templates/content.html
+
+added content.html
+------------------------------------------------------------------------
+r69 | pat | 2010-02-26 11:38:26 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   R /django/trunk/djangoproj/djangoapp/django_dbRoutines.py
+
+added symb link from  /djangoapp/django_dbRoutines.py to ./crawler
+------------------------------------------------------------------------
+r68 | pat | 2010-02-26 11:36:16 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/djangoapp/crawler/django_dbRoutines.py
+
+added back good django_dbRoutines.py
+------------------------------------------------------------------------
+r67 | pat | 2010-02-26 11:32:45 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/crawler/django_dbRoutines.py
+
+got rid of old django_dbRoutines.py
+------------------------------------------------------------------------
+r66 | pat | 2010-02-26 10:47:10 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/templates/displaySubSearches.html
+
+added back displaySubSearches.html
+------------------------------------------------------------------------
+r65 | pat | 2010-02-26 10:43:05 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/main/index.html
+   R /django/trunk/djangoproj/main/media
+
+fixed media symbolic link
+------------------------------------------------------------------------
+r64 | pat | 2010-02-26 10:41:07 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   R /django/trunk/djangoproj/main/header.html
+   M /django/trunk/djangoproj/main/index.html
+
+fixed header link
+------------------------------------------------------------------------
+r63 | pat | 2010-02-26 10:13:49 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   R /django/trunk/djangoproj/main/clients.html
+   A /django/trunk/djangoproj/main/clientsandhistory.html
+   A /django/trunk/djangoproj/main/contactus.html
+   R /django/trunk/djangoproj/main/content.html
+   A /django/trunk/djangoproj/main/content.html.save.1
+   A /django/trunk/djangoproj/main/coreteam.html
+   R /django/trunk/djangoproj/main/dogma.html
+   R /django/trunk/djangoproj/main/dsm.html
+   R /django/trunk/djangoproj/main/header.html
+   A /django/trunk/djangoproj/main/header.html.save
+   R /django/trunk/djangoproj/main/index.html
+   R /django/trunk/djangoproj/main/media
+   R /django/trunk/djangoproj/main/nav.html
+   A /django/trunk/djangoproj/main/nonRational.html
+   R /django/trunk/djangoproj/main/sim.html
+   R /django/trunk/djangoproj/main/social.html
+   A /django/trunk/djangoproj/main/utilitymr.html
+
+restored more files
+------------------------------------------------------------------------
+r62 | pat | 2010-02-26 09:55:33 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/config/deploy/jennifer.rb
+   R /django/trunk/djangoproj/media
+   A /django/trunk/djangoproj/media/295_158.jpg
+   A /django/trunk/djangoproj/media/Ajith_Kumar.jpg
+   A /django/trunk/djangoproj/media/Ajith_Kumar_clean.bak.jpg
+   A /django/trunk/djangoproj/media/Ajith_Kumar_clean.jpg
+   A /django/trunk/djangoproj/media/Bandera_Nez_Percé.PNG
+   A /django/trunk/djangoproj/media/abel grimmer The Month of February.jpg
+   A /django/trunk/djangoproj/media/back-cont-small.jpg
+   A /django/trunk/djangoproj/media/back-small-gold.gif
+   A /django/trunk/djangoproj/media/back-small.gif
+   A /django/trunk/djangoproj/media/ballSpokePsycho.jpg
+   A /django/trunk/djangoproj/media/blue-big.jpg
+   A /django/trunk/djangoproj/media/bpa.jpg
+   A /django/trunk/djangoproj/media/bullet-arrow-green.jpg
+   A /django/trunk/djangoproj/media/bullet-arrow-maroon.jpg
+   A /django/trunk/djangoproj/media/bullet-arrow.jpg
+   A /django/trunk/djangoproj/media/bullet.jpg
+   A /django/trunk/djangoproj/media/bullet.xcf
+   A /django/trunk/djangoproj/media/chart.jpg
+   A /django/trunk/djangoproj/media/cocacola.jpg
+   A /django/trunk/djangoproj/media/dark-green.jpg
+   A /django/trunk/djangoproj/media/firefly.gif
+   A /django/trunk/djangoproj/media/firefly.jpg
+   A /django/trunk/djangoproj/media/forward-small.gif
+   A /django/trunk/djangoproj/media/forward-small.gold.gif
+   A /django/trunk/djangoproj/media/images
+   A /django/trunk/djangoproj/media/inel.jpg
+   A /django/trunk/djangoproj/media/intel.gif
+   A /django/trunk/djangoproj/media/intel.jpg
+   A /django/trunk/djangoproj/media/intrawest.jpg
+   A /django/trunk/djangoproj/media/isepphouse.gif
+   A /django/trunk/djangoproj/media/kirby_earth.pes.JPG
+   A /django/trunk/djangoproj/media/maroon.jpg
+   A /django/trunk/djangoproj/media/nezperce.gif
+   A /django/trunk/djangoproj/media/norrisEmbry.jpg
+   A /django/trunk/djangoproj/media/npt.jpg
+   A /django/trunk/djangoproj/media/oni.jpg
+   A /django/trunk/djangoproj/media/pes-mail.jpg
+   A /django/trunk/djangoproj/media/pes-mail.xcf
+   A /django/trunk/djangoproj/media/pes.GIF
+   A /django/trunk/djangoproj/media/pes.jpg
+   A /django/trunk/djangoproj/media/pnnl.jpg
+   A /django/trunk/djangoproj/media/sandia.gif
+   A /django/trunk/djangoproj/media/scream.jpg
+   A /django/trunk/djangoproj/media/silhouette.jpg
+   A /django/trunk/djangoproj/media/silhouette1.jpg
+   A /django/trunk/djangoproj/media/spacer-green.jpg
+   A /django/trunk/djangoproj/media/spacer-maroon.jpg
+   A /django/trunk/djangoproj/media/steamengine.jpg
+   A /django/trunk/djangoproj/media/style.css
+   A /django/trunk/djangoproj/media/symmetrics.gif
+   A /django/trunk/djangoproj/media/symmetrics.jpg
+   A /django/trunk/djangoproj/media/symmetricsOrig.jpg
+   A /django/trunk/djangoproj/media/synovate.jpg
+   A /django/trunk/djangoproj/media/town.jpg
+   A /django/trunk/djangoproj/media/usdoe.jpg
+   A /django/trunk/djangoproj/media/windmill.jpg
+   A /django/trunk/djangoproj/media/windmill1.jpg
+   A /django/trunk/djangoproj/media/wsj.jpg
+   A /django/trunk/djangoproj/media/wsj1.jpg
+
+added media
+------------------------------------------------------------------------
+r61 | pat | 2010-02-26 09:27:52 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/djangoapp/projectSpecs.py
+
+replaced project specs
+------------------------------------------------------------------------
+r60 | pat | 2010-02-26 09:25:06 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/djangoapp/django_dbRoutines.py
+   D /django/trunk/djangoproj/djangoapp/projectSpecs.py
+
+removed project specs
+------------------------------------------------------------------------
+r59 | pat | 2010-02-26 08:54:17 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/djangoapp/__init__.py
+   A /django/trunk/djangoproj/djangoapp/django_dbRoutines.py
+   A /django/trunk/djangoproj/djangoapp/forms.py
+   R /django/trunk/djangoproj/djangoapp/projectSpecs.py
+   A /django/trunk/djangoproj/djangoapp/todo.py
+   A /django/trunk/djangoproj/djangoapp/views.py
+
+more files
+------------------------------------------------------------------------
+r57 | pat | 2010-02-26 08:27:37 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/Capfile (from /django/trunk/Capfile:56)
+   A /django/trunk/djangoproj/config (from /django/trunk/config:56)
+
+move capfile info back
+------------------------------------------------------------------------
+r56 | pat | 2010-02-26 08:23:38 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/Capfile (from /django/trunk/djangoproj/Capfile:55)
+   A /django/trunk/config (from /django/trunk/djangoproj/config:55)
+   D /django/trunk/djangoproj/Capfile
+   D /django/trunk/djangoproj/config
+
+moved capfile above proj level to deploy whole project
+------------------------------------------------------------------------
+r55 | pat | 2010-02-26 08:18:24 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/pat
+
+added faux file as a datestamp
+------------------------------------------------------------------------
+r54 | pat | 2010-02-26 07:51:08 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/djangoapp/crawler
+   A /django/trunk/djangoproj/djangoapp/crawler/b_bingSearch.py
+   A /django/trunk/djangoproj/djangoapp/crawler/b_crawler.py
+   A /django/trunk/djangoproj/djangoapp/crawler/b_dbRoutines.py
+   A /django/trunk/djangoproj/djangoapp/crawler/b_googleSearch.py
+   A /django/trunk/djangoproj/djangoapp/crawler/b_openUrl.py
+   A /django/trunk/djangoproj/djangoapp/crawler/b_taskWrappers.py
+   A /django/trunk/djangoproj/djangoapp/crawler/captureContent.py
+   A /django/trunk/djangoproj/djangoapp/crawler/django_dbRoutines.py
+   A /django/trunk/djangoproj/djangoapp/crawler/findDate.py
+   A /django/trunk/djangoproj/djangoapp/crawler/models.py
+   A /django/trunk/djangoproj/djangoapp/crawler/philparser.py
+   A /django/trunk/djangoproj/djangoapp/crawler/projectSpecs.py
+   A /django/trunk/djangoproj/djangoapp/crawler/scorer.py
+   A /django/trunk/djangoproj/djangoapp/crawler/settings.py
+   A /django/trunk/djangoproj/djangoapp/crawler/testModules.py
+   A /django/trunk/djangoproj/djangoapp/crawler/testSubClass.py
+   A /django/trunk/djangoproj/djangoapp/crawler/tests.py
+   A /django/trunk/djangoproj/djangoapp/crawler/unicode issues.py
+   A /django/trunk/djangoproj/djangoapp/crawler/utilities.py
+   A /django/trunk/djangoproj/djangoapp/crawler/views.py
+
+cleanup
+------------------------------------------------------------------------
+r53 | pat | 2010-02-26 07:50:47 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/djangoapp/tests.py
+
+cleanup
+------------------------------------------------------------------------
+r52 | pat | 2010-02-26 07:44:22 -0800 (Fri, 26 Feb 2010) | 1 line
+Changed paths:
+   R /django/trunk/djangoproj/djangoapp
+   A /django/trunk/djangoproj/djangoapp/b_dbRoutines.py
+   A /django/trunk/djangoproj/djangoapp/media
+   A /django/trunk/djangoproj/djangoapp/models.py
+   A /django/trunk/djangoproj/djangoapp/projectSpecs.py
+   A /django/trunk/djangoproj/djangoapp/settings.py
+
+cleanup:
+------------------------------------------------------------------------
+r51 | pat | 2010-02-26 07:14:51 -0800 (Fri, 26 Feb 2010) | 2 lines
+Changed paths:
+   M /django/trunk/djangoproj/djangoapp/__init__.pyc
+   A /django/trunk/djangoproj/djangoapp/views.py
+
+added back views.py (accidently deleted)
+
+------------------------------------------------------------------------
+r49 | pat | 2010-02-25 16:12:58 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/django-admin.py
+   D /django/trunk/djangoproj/djangoapp/templates
+
+maybe last pruning of 35
+------------------------------------------------------------------------
+r45 | pat | 2010-02-25 15:42:27 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/media
+
+cleanup
+------------------------------------------------------------------------
+r44 | pat | 2010-02-25 15:28:26 -0800 (Thu, 25 Feb 2010) | 3 lines
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/djangoapp
+
+removed extra app dir
+
+
+------------------------------------------------------------------------
+r43 | pat | 2010-02-25 15:26:55 -0800 (Thu, 25 Feb 2010) | 2 lines
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/Readme
+   D /django/trunk/djangoproj/djangoapp/apache
+   D /django/trunk/djangoproj/djangoapp/django wing project.wpr
+   D /django/trunk/djangoproj/djangoapp/junk.html.py
+   D /django/trunk/djangoproj/djangoapp/junk.py
+   D /django/trunk/djangoproj/djangoapp/manage.py
+   D /django/trunk/djangoproj/djangoapp/settings.py
+   D /django/trunk/djangoproj/djangoapp/urls.py
+
+pruned some deadwood
+
+------------------------------------------------------------------------
+r42 | pat | 2010-02-25 14:23:52 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/config
+   A /django/trunk/djangoproj/config/deploy
+   A /django/trunk/djangoproj/config/deploy/dianne.rb
+   A /django/trunk/djangoproj/config/deploy/jennifer.rb
+   A /django/trunk/djangoproj/config/deploy/moira.rb
+   A /django/trunk/djangoproj/config/deploy/production.rb
+   A /django/trunk/djangoproj/config/deploy/testing.rb
+   A /django/trunk/djangoproj/config/deploy/trunk.rb
+   A /django/trunk/djangoproj/config/deploy.rb
+
+added back config
+------------------------------------------------------------------------
+r41 | pat | 2010-02-25 14:20:11 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   A /django/trunk/djangoproj/Capfile (from /django/trunk/djangoproj/djangoapp/Capfile:38)
+
+cleanup
+------------------------------------------------------------------------
+r40 | pat | 2010-02-25 14:02:15 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/djangoproj/djangoapp/Capfile
+   D /django/trunk/djangoproj/djangoapp/config
+
+moved cap files
+------------------------------------------------------------------------
+r39 | pat | 2010-02-25 14:00:45 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   M /django/trunk/djangoproj/apache/django.wsgi
+
+changed apache settings for /var/www/pes/current
+------------------------------------------------------------------------
+r38 | pat | 2010-02-25 13:12:13 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/Readme
+   A /django/trunk/djangoproj/Readme (from /django/trunk/Readme:37)
+   A /django/trunk/djangoproj/settings.py (from /django/trunk/settings.py:37)
+   D /django/trunk/settings.py
+
+caught a couple more files
+------------------------------------------------------------------------
+r37 | pat | 2010-02-25 13:10:45 -0800 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   D /django/trunk/__init__.py
+   D /django/trunk/apache
+   D /django/trunk/colors_and_templates
+   D /django/trunk/django-admin.py
+   D /django/trunk/djangoapp
+   A /django/trunk/djangoproj
+   A /django/trunk/djangoproj/__init__.py (from /django/trunk/__init__.py:36)
+   A /django/trunk/djangoproj/apache (from /django/trunk/apache:36)
+   A /django/trunk/djangoproj/django-admin.py (from /django/trunk/django-admin.py:36)
+   A /django/trunk/djangoproj/djangoapp (from /django/trunk/djangoapp:36)
+   A /django/trunk/djangoproj/main (from /django/trunk/main:36)
+   A /django/trunk/djangoproj/manage.py (from /django/trunk/manage.py:36)
+   A /django/trunk/djangoproj/media (from /django/trunk/media:36)
+   A /django/trunk/djangoproj/templates (from /django/trunk/templates:36)
+   A /django/trunk/djangoproj/urls.py (from /django/trunk/urls.py:36)
+   D /django/trunk/main
+   D /django/trunk/manage.py
+   D /django/trunk/media
+   D /django/trunk/templates
+   D /django/trunk/urls.py
+
+added an uberdirectory djangoproj
+------------------------------------------------------------------------

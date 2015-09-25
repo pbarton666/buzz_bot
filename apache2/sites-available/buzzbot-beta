@@ -1,0 +1,14 @@
+<VirtualHost 67.42.4.124>
+
+ProxyRequests Off
+
+<Proxy *>
+Order deny,allow
+Allow from all
+</Proxy>
+
+ProxyPass / http://localhost:8051/
+ProxyPassReverse / http://localhost:8051/
+
+</VirtualHost>
+

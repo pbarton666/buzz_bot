@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<body>
+		
+		{% if error %}
+		<p>{{ error }}</p>
+		{% endif %}
+		<!-- the action directive sets the target; method is POST, SUBMIT, or GET -->
+		<form action="login" method="POST">
+		{{ form.as_p }}
+		<input type="submit" name = "login" value="Login" />
+		&nbsp;
+		(you can use guest/guest if you don't have an account)
+		</form>
+	</body>
+</html>
+	

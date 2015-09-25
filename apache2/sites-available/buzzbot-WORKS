@@ -1,0 +1,30 @@
+<VirtualHost 67.42.4.123>
+
+#Alias /static /usr/local/turbogears/buzzbot/buzzbot/static
+Alias /static /var/www/buzzbot/current/buzzbot/static
+Alias /chartapi /var/www/buzzbot/timeplot/api/10
+Alias /displayCharts /var/www/buzzbot/current/buzzbot/eventfiles
+#
+
+ErrorLog     /var/log/apache2/buzzbot-error.log
+TransferLog  /var/log/apache2/buzzbot-access.log
+
+WSGIDaemonProcess 67.42.4.123  threads=4
+WSGIProcessGroup 67.42.4.123
+WSGIScriptAlias / /var/www/buzzbot/current/apache/buzzbot.wsgi
+
+
+#WSGIDaemonProcess 67.42.4.123 threads=10 maximum-requests=1000
+
+<Directory /var/www/buzzbot/current/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+#newly added 20 feb 09
+ProxyPass /eventfiles !
+ProxyPass /static !
+ProxyPass /displayChart !
+
+</VirtualHost>
+

@@ -1,0 +1,353 @@
+/* CSS for text mining results */
+
+/* a palatte of colors can be found at http://msdn2.microsoft.com/en-us/library/aa358800(VS.85).aspx */
+/* F0F8FF     sort of sliver*/
+/* #87CEFA;   sky blue*/
+/* #F0F8FF;   Alice blue*/		    
+/* #aaa       dark gray */ 
+/* #ddd       dark gray */
+/* #eee       silvery gray */
+/* #F0E68C      khaki*/
+
+
+  html {			    /* outermost frame, fills all unspecified space */
+    /*color: #F0E68C ;		    /* comment */ 
+    /*background-color: #F0E68C;	    /* #ADD8E6 is light blue */ 
+    font: x-small "Lucida Grande", "Lucida Sans Unicode", geneva, verdana, sans-serif;
+    /*margin: 0;			    /* space to the outside of the frame */ 
+    /*padding: 1px;		    /* empty space inside this element colored as self.background */ 
+  }  
+  
+   body {			    /* embedded in html and fills the width of the browser window */
+    color: red ;		    /* font color */ 
+    background-color: #F0E68C ;	    /* #ddd is a light gray */ 
+    /* width: 750px;			  /* width of the background panel */ 
+    font: x-small "Lucida Grande", "Lucida Sans Unicode", geneva, verdana, sans-serif;
+    /*margin: 0;			    /* comment */ 
+    /*padding: 1px;		    /* margine to the edge of the browser window (left/right) */ 
+    padding: 4px 8px;
+  }
+  
+  #main_content	{		    /* main tg canvas embedded in 'body'*/
+    color: black;  		    /* font color */ 
+    font-size: 127%;		    /* pct of normal */ 
+    background-color: #F0E68C 	;	    /* comment */ 
+    width: 750px;		    /* width of the background panel */ 
+    margin: 0 auto 0 auto;	    /* comment */ 
+    border-left: 0px solid #aaa;    /* aaa is dark gray */ 
+    border-right: 0px solid #aaa;   /* comment */ 
+    padding: 1px;		    /* basically a margin around everything */
+  }
+   /* These are the general defaults for elements in the <body> block: */  
+   /* fonts*/ 
+    a.link, a, a.active { color: #369; }	  /* link color */  
+    h1 {font-size: 100%; color: orange;padding-left: 3px; padding-bottom: 0px}
+    h2 {font-size: 150%;color: orange;padding-left: 3px; padding-bottom: 0px}
+    h3 {font-size: 200%;color: orange; padding-left: 3px; padding-bottom: 0px}
+    h4 {font-size: 250%;color: orange;}
+    h5 {font-size: 350%;color: orange;}
+    h6 {font-size: 400%;color: orange;}
+    
+/* master (default) table style  */
+    table{					        		    
+	background-color: #F0E68C ; /* background color for cell grid, top, sides, etc. */ 
+	margin: 0px;
+	margin-left: 15px;
+	padding: 0px;
+	padding-left: 3px;
+	padding-right: 3px;  
+    /* border: 2px solid #ccc; */
+      }	
+	
+/* other ways to use css to address stuff:  */	
+/* this would apply to any element of CLASS "somelabel"	 */
+	.somelabel{color: #000000;}	  		
+
+ /* this would apply to a specific element with ID "someResults"*/
+	#someResults{background-color: #00ccff;	}
+
+ /* this would apply to a table element with CLASS "someTable"*/
+	table.someTable{background-color: #00ccff;}
+	
+/* this would apply to table headers within the CLASS "someTable"*/	
+	th.someTable{background-color: #87CEFA;	}	
+	
+/************************ general specifications *************************** */
+/*class for outer table to frame contents */
+	table.loginFrameTable{		
+		height: 200px;
+		width: 400px;
+		padding: 30px;
+		padding-left: 0px;
+		border:20px ;
+		margin-left: 30px;
+		margin-top:0px;
+		padding-top:0px;
+		}
+	table.loginInnerTable{		
+		height: 200px;
+		width: 400px;
+		padding: 30px;
+		margin-left: 30px;
+		border:0px;
+		}		
+/* login.kid:  class for input fields */
+	input.loginField{
+		width: 200px;
+		padding: 0px;
+		margin: 0px		
+		}
+	tr.loginText{
+		width: 130px;
+		text-align: left;
+		font-weight: bold;
+		color: orange;
+		padding: 10px;
+		margin-top: 10px		
+		}
+	td.welcome{
+		font-weight: bold;
+		color: orange;
+		text-align: center;
+		font-size: 120%;	
+		}
+/* view_lps */
+	table.lp_frame{
+		height: 500px;
+		width: 500px;
+		margin-bottom: 20px;
+		margin-top: -10px;
+		border: 2px;
+	}
+	table.lp_header_table{		
+		width :550px;
+		height: 20px;
+		margin-bottom: -25px;
+		margin-top: 0px;  
+		margin-left: 10px;
+		color: red;
+		border: 0px;
+	}
+	table.lp_list{		
+		/* This works:  don't set the height of the table.  Instead, embed it
+		   in a div tag where 1) the height is set; an 2) the overflow is set to
+		   'auto'.  The effect is to have table that auto-sizes its height as
+		   it gains content until it's as tall as the container, at which point
+		   the container sprouts a vertical scroll bar.  If we separate the table
+		   column headers from the table itself, then they will be available even
+		   as the table (its container, really) is scrolled. */
+		width :550px;
+		margin-top: 0px;
+		color: black;
+		border: 0px;
+	}
+	table.btn_table{		
+		/* if we don't set the height it autosizes.  when it hits
+		   the height of the containing div, the dive will scroll*/
+		width: 550px;
+		margin-top: 0px;
+		border: 0px solid green;
+		color: black;
+	}	
+	div.scrollDiv{
+		overflow: auto;
+		height: 500px;
+		border: 0px solid blue;
+	}
+	#namecol{width: 100px; text-align: left; }
+	#ownercol{width: 50px;text-align: center;}
+	#desccol{width: 200px;text-align: center;}
+	#actionscol{width: 150px; text-align: left; }
+	#lp_header{height: 5px;text-align: center;}
+	#button_col{height: 5px; width: 10px; text-align: left;}
+	
+		
+/* edit_lp: (the kid template uses some of the classes set up for the view_lps, above)  */
+	table.lp_options{
+		height: 100px;
+		width: 500px;
+		margin-bottom: 20px;
+		margin-top: 10px;		
+	}
+	table.search_list{		
+		/* if we don't set the height it autosizes.  when it hits
+		   the height of the containing div, the dive will scroll*/
+		width:550px;
+		margin-top: 0px;
+		color: black;
+		border: 0px;
+		margin-left: -4px; /*keep this synched w/ margin for the div (below) */
+	}	
+	table.search_header_table{		
+		width :550px;
+		height: 20px;
+		margin-bottom: -25px;
+		margin-top: -00px;  
+		margin-left: 13px;  
+		color: red;
+		border: 0px;
+	}	
+	div.search_scroll_div{
+		overflow: auto;
+		height: 300px;
+		width:500;
+		margin-left: 0px;
+	}	
+	div.edit_lp_all_searches_div{
+
+		border: 2px solid #ccc;
+		width: 500px;
+		margin-left: 15px;
+	}
+	table.help_table{		
+		width :650px;
+		height: 20px;
+		margin-bottom: 15px;
+		margin-top: 10px;  
+		margin-left: 10px;
+		color: black;
+		border: 0px;
+	}
+
+	#checkcol{width: 5px; text-align: left;}
+	#namecol_searchs{width: 150px; text-align: left; }
+	#ownercol_searchs{width: 100px;text-align: left;}
+	#desccol_searchs{width: 400px;text-align: left;}
+	#actionscol_searchs{width: 150px; text-align: left; }	
+
+div#header td.logo {
+    width: 50px;
+    padding: 0;
+}
+div#header td.title {
+    text-align: center;
+}
+div#header table {
+    width: auto;
+    border: 0;
+}
+div#header img {
+    border: 0
+    width: 50px;
+    height: 50px;
+}
+fieldset td.label { padding-right: 2em; }
+form > fieldset { min-width: 600px; }
+fieldset fieldset { margin-top: 1em; }
+fieldset th.label { text-align: left; vertical-align: top; padding-right: 2em; width: 12em; }
+
+div.scrolling {
+    height: 380px;
+    overflow: auto;
+}
+table.searchresults td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.1em 0.25em;
+}
+
+table.searchresults td.fixed {
+    width: 8em;
+}
+.noresults {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table.grid td {
+    padding: 0.05em 1em;
+}
+
+body.login {
+    background: #fff url(/static/images/synovate_logo.jpg) no-repeat 10px 10px;
+}
+body.login div {
+    padding: 2px 8px;
+    margin: 220px auto 0 auto;
+    border: solid #F0F9CA 2px;
+    background-color:  #F0E68C;
+    width: 300px;
+}
+body.login div td {
+    margin: 0;
+    border: 0;
+}
+body.login div table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body.login form fieldset {
+    background: #F0E68C;
+    width: auto;
+    min-width: 0;
+}
+body.login form input {
+    padding: 0.1em 0.2em;
+}
+
+/* edit_search: (the kid template uses many of the classes set up for the view_lps, above)  */	
+	table.search_spec_frame	{
+		height: 300px;
+		width: 600px;
+		margin-bottom: 20px;
+		margin-top: -0px;
+		border: 0px;			
+	}
+	tr.edit_search_header{
+		padding: 0px;
+		margin-left: 5px;
+		margin-top: -10px;
+		margin-bottom: -20px;
+		height: 5px;	
+	}
+	table.edit_search_general_table{
+		margin-top: -0px;
+		margin-bottom: 0px;
+	}
+	#edit_search_left_col{	width: 300px;text-align: left;}
+	#edit_search_right_col{	width: 500px;text-align: left;}
+	#edit_search_action_colmidway{width: 500px;}
+
+/* view_contents */
+	table.content_header_table{		
+		width :550px;
+		height: 20px;
+		margin-bottom: -10px;
+		margin-top: 0px;  
+		margin-left: -3px;  
+		color: red;
+		border: 0px;
+	}
+	#checkcol_content{width: 15px;text-align: left; vertical-align: top; }
+	#scorecol{width: 40px;text-align: center;vertical-align: top;}
+	#datecol{width: 70px;text-align: left;vertical-align: top;}
+	#contcol{width: 350px;text-align: left;vertical-align: top;}
+	#linkcol{width: 20px;text-align: right;vertical-align: top;}
+	#content_header{height: 25px;text-align: center;}	
+	#dogma{vertical-align: top;}	
+	#button{height: 20px; width: 40px; font-size: 12px;}
+	
+/*verify_delete_lp and ..._search */
+		table.verify_delete_frame{
+		height: 300px;
+		width: 500px;
+		margin-bottom: 20px;
+		margin-top: -10px;
+		border: 0px;
+		}
+
+/*view_urls */
+	#urlcol{width: 250px;text-align: left;vertical-align: center;}
+
+/* add_urls */
+	table.add_url_options{
+		border: 0px;
+		padding-left: 100px;
+		}
+	#url_add_field{width: 300px; 
+		margin-left: 100px;
+		padding-left: 100px;}
+	#add_url_left_col{width: 150px; text-align: bottom}
+	#add_url_right_col{width: 15px; text-align: top}
+	

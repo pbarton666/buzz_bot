@@ -1,0 +1,129 @@
+########################################################################
+#                         server wide specs                            #
+########################################################################
+
+#Note: can't use Name based virtual servers with ssl
+
+###################################################################
+#    HOST TO SERVE AT "/VAR/WWW ... (deployment directory)        #
+###################################################################
+
+<VirtualHost 67.42.4.123>
+#added serve name
+ServerName 67.41.4.123
+
+WSGIDaemonProcess 67.42.4.123  threads=4
+WSGIProcessGroup 67.42.4.123
+WSGIScriptAlias / /var/www/buzzbot/current/apache/buzzbot.wsgi
+
+#WSGIDaemonProcess 67.42.4.123 threads=10 maximum-requests=1000
+
+########Jennifer-sepcific settings ############################
+#                                                             #
+#add SSL
+SSLEngine on
+SSLCertificateFile /etc/apache2/ssl/buzz.crt
+SSLCertificateKeyFile /etc/apache2/ssl/buzz.key.unsecure
+
+########Settings below in common with proxies on jennier ###########
+#                                                                  #
+
+#allows flexibility, enabling bot/dir/  and bot/dir  both to work
+#UseCanonicalName Off
+ServerSignature Off
+AddDefaultCharset utf-8
+
+Alias /static/ /var/www/buzzbot/current/buzzbot/static/
+Alias /timeplot/ /var/www/buzzbot/current/buzzbot/timeplot/
+Alias /timeline/ /var/www/buzzbot/current/buzzbot/timeline/
+Alias /ajax/ /var/www/buzzbot/current/buzzbot/ajax/
+Alias /displayChart/tmp-timeplot-data/  /var/www/buzzbot/current/buzzbot/displayChart/tmp-timeplot-data/
+Alias /displayChart/event-data/  /var/www/buzzbot/current/buzzbot/displayChart/event-data/
+
+ProxyPass /timeplot/api/1.0/ !
+ProxyPass /static/ !
+ProxyPass /timeplot/ !
+ProxyPass /timeline/ !
+ProxyPass /ajax/ !
+ProxyPass        /favicon.ico !
+
+<Directory /var/www/buzzbot/current/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+#force apache to return an xml document (not sure this is working)
+<Directory /displayChart/event-data/>
+Header set Content-Type "text/xml"
+</Directory>
+
+ErrorLog     /var/log/apache2/buzzbot-error.log
+TransferLog  /var/log/apache2/buzzbot-access.log
+LogLevel debug
+#ProxyHTMLLogVerbose On   need to install mod_html - not in current build
+
+</VirtualHost>
+
+#################################################################
+#       HOST TO SERVE AT "/PAT1/"  (working directory)          #
+#################################################################
+
+<VirtualHost 67.42.4.124>
+DocumentRoot /home/pat1/buzz/buzzbot
+
+#added serve name
+ServerName 67.42.4.124
+ServerSignature Off
+AddDefaultCharset utf-8
+
+WSGIDaemonProcess 67.42.4.124  threads=4
+WSGIProcessGroup 67.42.4.124
+WSGIScriptAlias / /home/pat1/buzz/apache/buzzbot.wsgi
+
+########Jennifer-sepcific settings ############################
+#                                                             #
+#add SSL
+SSLEngine on
+SSLCertificateFile /etc/apache2/ssl/buzz.crt
+SSLCertificateKeyFile /etc/apache2/ssl/buzz.key.unsecure
+
+
+########Settings below in common with any deployment ###########
+#                                                              #
+
+#allows flexibility, enabling bot/dir/  and bot/dir  both to work
+#UseCanonicalName Off
+ServerSignature Off
+AddDefaultCharset utf-8
+
+Alias /static/ /var/www/buzzbot/current/buzzbot/static/
+Alias /timeplot/ /var/www/buzzbot/current/buzzbot/timeplot/
+Alias /timeline/ /var/www/buzzbot/current/buzzbot/timeline/
+Alias /ajax/ /var/www/buzzbot/current/buzzbot/ajax/
+Alias /displayChart/tmp-timeplot-data/  /var/www/buzzbot/current/buzzbot/displayChart/tmp-timeplot-data/
+Alias /displayChart/event-data/  /var/www/buzzbot/current/buzzbot/displayChart/event-data/
+
+ProxyPass /timeplot/api/1.0/ !
+ProxyPass /static/ !
+ProxyPass /timeplot/ !
+ProxyPass /timeline/ !
+ProxyPass /ajax/ !
+ProxyPass        /favicon.ico !
+
+<Directory /var/www/buzzbot/current/apache>
+Order deny,allow
+Allow from all
+</Directory>
+
+#force apache to return an xml document (not sure this is working)
+<Directory /displayChart/event-data/>
+Header set Content-Type "text/xml"
+</Directory>
+
+ErrorLog     /var/log/apache2/buzzbot-error.log
+TransferLog  /var/log/apache2/buzzbot-access.log
+LogLevel debug
+#ProxyHTMLLogVerbose On   need to install mod_html - not in current build
+
+</VirtualHost>
+

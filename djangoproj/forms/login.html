@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+  <link href="media/style.css" type="text/css" rel="stylesheet">
+  </head>
+
+<!-- pull in the header, css, etc. from base.html; then do a background fill; then add the content -->
+<body  background="/media/dark-green.jpg">
+
+<table>
+	<tr>
+		<td>
+			<img src="/media/firefly.jpg" height="60px" width="60px"></img>
+		</td>
+		<td class="nav-header">
+			Please Choose A Search
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			
+		</td>
+		<td>
+			<table class="buzztable">
+				<tr>
+					<th class="buzzhead">Title</th>
+
+			<!--	<th class="buzzhead"></th>  placeholder for 'modify'-->
+
+					<th class="buzzhead">Terms <br> Included</th>
+					<th class="buzzhead">and/<br>or</th>
+					<th class="buzzhead">Terms<br>Excluded</th>
+					<th class="buzzhead">and/<br>or</th>
+				</tr>
+				<tr>
+					<td class="dashline" colspan="6"></td>
+				</tr>
+				{% for data in form %}
+				<tr class="{% cycle 'odd' 'even' as rowcolors %}">
+					<td> <a href="viewContentByCriteria/{{data.id}}"> {{ data.title }} </a> </td>
+
+				<!--	<td> <a href="editCriteria/{{data.id}}">  modify  </a>                  </td>'-->
+
+
+					<td>  {{ data.include }}  </td>
+					<td>  {{ data.andor }}    </td>
+					<td>  {{ data.exclude }}  </td>
+					<td>  or                  </td>		
+				</tr>
+				{% endfor%}
+			</table>	
+		</td>
+	</tr>
+</table>	
+
+
+</body>

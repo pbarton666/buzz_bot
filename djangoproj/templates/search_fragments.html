@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+  <link href="media/style.css" type="text/css" rel="stylesheet">
+  </head>
+
+<!-- pull in the header, css, etc. from base.html; then do a background fill; then add the content -->
+<body  background="/media/dark-green.jpg">
+	
+	<table class="search-term-table"> <!--main container table-->
+			<tr colspan="4">
+				<td class="nav-header">
+					Please Edit Your Search
+				<td>	
+			</tr>
+			<tr>
+				<td>
+					
+					<table class="search-term-table">
+						<tr>
+							<td>
+							</td>
+							<td class="search-term-label">
+								Title	
+							</td>
+							<td class="search-term-input">
+								<textarea name="include" cols="50" rows="0">{{data.name}}</textarea>
+							</td>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="/media/firefly.jpg" height="60px" width="60px"></img>
+							</td>
+							<td class="search-term-label">
+								Search Terms To Include		
+							</td>
+							<td class="search-term-input">
+								<textarea name="include" cols="100" rows="5"></textarea>
+							</td>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>	
+						
+						<tr>
+							<td>
+								<input class="table-check" name="andor" type="checkbox"/>
+							</td>
+							<td class="search-term-label">
+								Require all terms (AND)?		
+							</td>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>		
+						
+						<tr>
+							<td>
+								<img src="/media/firefly.jpg" height="60px" width="60px"></img>
+							</td>
+							<td class="search-term-label">
+								Search Terms To Exclude (optional)		
+							</td>
+							<td class="search-term-input">
+								<textarea name="include" cols="100" rows="5"></textarea>
+							</td>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>		
+					
+					</table>	
+					
+					
+					<table>
+						<tr>
+							<td width="10px">
+								<form  method="POST" action="processSearchActions">
+							
+								<select style="font-size:10px;font-family:Arial;width:75px" name="searchid"  onchange=submit()>
+								<option > --select--</option>
+								<option value="editsearch/{{s.id}}" >edit</option>
+								<option value="deletesearch/{{s.id}}" >delete</option>
+								<option value="content/{{s.id}}" >view content</option>
+								
+								</select>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</td>	 <!--end of main container data element-->
+			</tr> <!--end of main container row-->	
+				
+		<table> <!--  end of main container table-->
+	</form>	
+</body>

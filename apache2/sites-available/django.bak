@@ -1,0 +1,44 @@
+#NameVirtualHost *
+ServerName pat1
+<VirtualHost _default_:9080>
+   DocumentRoot /home/pat1/workspace/djangoproj/main
+   ErrorLog    /var/log/apache2/pes-error.log
+   TransferLog /var/log/apache2/pes-access.log
+</VirtualHost>
+
+<VirtualHost _default_:80>
+    #DocumentRoot /var/www/pes
+    DocumentRoot /home/pat1/workspace/djangoproj
+    WSGIScriptAlias / /home/pat1/workspace/djangoproj/apache/django.wsgi
+    ErrorLog    /var/log/apache2/pes-error.log
+    TransferLog /var/log/apache2/pes-access.log
+   
+    <Location "/">
+        SetHandler python-program
+        PythonHandler django.core.handlers.modpython
+        SetEnv DJANGO_SETTINGS_MODULE djangoproj.settings
+        PythonOption django.root /djangoproj
+        PythonDebug On
+        PythonPath "['/home/pat1/workspace/djangoproj','/home/pat1/workspace'] + sys.path"
+    </Location>
+
+    #Alias / /home/pat1/workspace/djangoproj/media
+    Alias /media/ /home/pat1/workspace/djangoproj/media/
+    <location "/media">
+        SetHandler None
+    </location>
+
+ 
+    <location "/admin_media">
+        SetHandler None
+    </location>
+ 
+    <location "/phpmyadmin">
+        SetHandler None
+    </location>
+ 
+    <locationmatch ".(jpg|gif|png)$">
+        SetHandler None
+    </locationmatch>
+
+</VirtualHost>
